@@ -1,0 +1,31 @@
+# Docker ignore file - excludes files from Docker build context
+
+# Dependencies
+node_modules
+npm-debug.log*
+
+# Build outputs (we'll build fresh in Docker)
+.next
+out
+build
+
+# Development files
+.git
+.gitignore
+*.md
+.env.local
+.env.*.local
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test files
+coverage
+.nyc_output
