@@ -11,11 +11,14 @@ import { requestLogger } from './middleware/requestLogger';
 import { metricsHandler, metricsMiddleware } from './observability/metrics';
 import { getDependencyHealth } from './controllers/healthController';
 import logger from './utils/logger';
+import { rateLimiter } from './middleware/rateLimiter';
 
 dotenv.config();
 
 const app: Express = express();
 const port = process.env.PORT || 5000;
+
+app.set('trust proxy', 1);
 
 // Connect to Database
 connectDB();
@@ -26,6 +29,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(requestLogger);
 app.use(metricsMiddleware);
+app.use(rateLimiter);
 
 // Routes
 app.use('/api/auth', authRoutes);

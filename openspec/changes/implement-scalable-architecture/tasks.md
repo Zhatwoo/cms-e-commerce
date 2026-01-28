@@ -123,17 +123,17 @@
 ## Phase 6: Edge Services & SPOF Mitigation
 
 ### 6.1 Rate Limiting
-- [ ] 6.1.1 Install `rate-limiter-flexible` package
-- [ ] 6.1.2 Create `backend/src/middleware/rateLimiter.ts`
-- [ ] 6.1.3 Configure Redis-backed rate limiting
-- [ ] 6.1.4 Add rate limit headers to responses
-- [ ] 6.1.5 Update NGINX for X-RateLimit headers
+- [x] 6.1.1 Install `rate-limiter-flexible` package
+- [x] 6.1.2 Create `backend/src/middleware/rateLimiter.ts`
+- [x] 6.1.3 Configure Redis-backed rate limiting
+- [x] 6.1.4 Add rate limit headers to responses
+- [x] 6.1.5 Update NGINX for X-RateLimit headers
 
 ### 6.2 Infrastructure HA
-- [ ] 6.2.1 Document CDN configuration recommendations
-- [ ] 6.2.2 Document WAF rules for common attacks
-- [ ] 6.2.3 Add Redis Sentinel or cluster configuration
-- [ ] 6.2.4 Document DNS failover strategy
+- [x] 6.2.1 Document CDN configuration recommendations
+- [x] 6.2.2 Document WAF rules for common attacks
+- [x] 6.2.3 Add Redis Sentinel or cluster configuration
+- [x] 6.2.4 Document DNS failover strategy
 
 ---
 
