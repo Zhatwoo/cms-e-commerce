@@ -1,5 +1,49 @@
 import { Request, Response } from 'express';
 import User from '../models/User';
+import { firebaseAuth } from '../config/firebase';
+
+interface FirebaseSignInResponse {
+    idToken: string;
+    refreshToken: string;
+    expiresIn: string;
+    localId: string;
+    displayName?: string;
+    email?: string;
+}
+
+const getFirebaseApiKey = (): string | undefined =>
+    process.env.FIREBASE_API_KEY || process.env.NEXT_PUBLIC_FIREBASE_API_KEY;
+
+const signInWithFirebase = async (email: string, password: string): Promise<FirebaseSignInResponse> => {
+    const apiKey = getFirebaseApiKey();
+    if (!apiKey) {
+        throw new Error('Missing FIREBASE_API_KEY for Firebase Auth sign-in');
+    }
+
+    const response = await fetch(
+        `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${apiKey}`,
+        {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                email,
+                password,
+                returnSecureToken: true,
+            }),
+        }
+    );
+
+    const data = await response.json();
+
+    if (!response.ok) {
+        const message = data?.error?.message || 'Invalid email or password';
+        const error = new Error(message);
+        (error as any).status = 401;
+        throw error;
+    }
+
+    return data as FirebaseSignInResponse;
+};
 
 // @desc    Register a new user
 // @route   POST /api/auth/register
@@ -18,20 +62,38 @@ export const registerUser = async (req: Request, res: Response): Promise<void> =
             return;
         }
 
+        const auth = firebaseAuth();
         const userExists = await User.findOne({ email });
 
         if (userExists) {
-            res.status(400).json({ error: 'Ussssser with this email already exists' });
+            res.status(400).json({ error: 'User with this email already exists' });
             return;
         }
 
-        const user = await User.create({
-            name,
+        const existingFirebaseUser = await auth.getUserByEmail(email).catch(() => null);
+
+        if (existingFirebaseUser) {
+            res.status(400).json({ error: 'User with this email already exists' });
+            return;
+        }
+
+        const userRecord = await auth.createUser({
             email,
             password,
+            displayName: name,
         });
 
-        if (user) {
+        const role = 'user';
+        await auth.setCustomUserClaims(userRecord.uid, { role });
+
+        try {
+            const user = await User.create({
+                name,
+                email,
+                role,
+                firebaseUid: userRecord.uid,
+            });
+
             res.status(201).json({
                 message: 'User created successfully',
                 user: {
@@ -39,11 +101,13 @@ export const registerUser = async (req: Request, res: Response): Promise<void> =
                     name: user.name,
                     email: user.email,
                     role: user.role,
+                    firebaseUid: user.firebaseUid,
                     createdAt: user.createdAt,
                 },
             });
-        } else {
-            res.status(400).json({ error: 'Invalid user data' });
+        } catch (dbError) {
+            await auth.deleteUser(userRecord.uid);
+            throw dbError;
         }
     } catch (error: any) {
         console.error('Registration error:', error);
@@ -58,20 +122,51 @@ export const loginUser = async (req: Request, res: Response): Promise<void> => {
     try {
         const { email, password } = req.body;
 
-        const user = await User.findOne({ email }).select('+password');
-
-        if (user && (await user.comparePassword(password))) {
-            res.status(200).json({
-                id: user._id,
-                name: user.name,
-                email: user.email,
-                role: user.role,
-            });
-        } else {
-            res.status(401).json({ error: 'Invalid email or password' });
+        if (!email || !password) {
+            res.status(400).json({ error: 'Email and password are required' });
+            return;
         }
+
+        const auth = firebaseAuth();
+        const signInData = await signInWithFirebase(email, password);
+
+        const decodedToken = await auth.verifyIdToken(signInData.idToken);
+        const role = (decodedToken as any).role || 'user';
+
+        let user = await User.findOne({ firebaseUid: signInData.localId });
+
+        if (!user) {
+            user = await User.findOne({ email });
+        }
+
+        if (!user) {
+            const firebaseUser = await auth.getUser(signInData.localId);
+            const displayName = firebaseUser.displayName || email.split('@')[0];
+
+            user = await User.create({
+                name: displayName,
+                email,
+                role,
+                firebaseUid: signInData.localId,
+            });
+        } else if (!user.firebaseUid) {
+            user.firebaseUid = signInData.localId;
+            await user.save();
+        }
+
+        res.status(200).json({
+            id: user._id,
+            name: user.name,
+            email: user.email,
+            role: user.role || role,
+            firebaseUid: user.firebaseUid,
+            idToken: signInData.idToken,
+            refreshToken: signInData.refreshToken,
+            expiresIn: signInData.expiresIn,
+        });
     } catch (error: any) {
         console.error('Login error:', error);
-        res.status(500).json({ error: error.message || 'Internal server error' });
+        const status = error?.status || 500;
+        res.status(status).json({ error: error.message || 'Internal server error' });
     }
 };

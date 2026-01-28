@@ -1,0 +1,83 @@
+---
+config:
+  layout: elk
+  theme: redux-dark
+---
+flowchart LR
+ subgraph API["Backend API Servers stateless"]
+    direction TB
+        S1["API Server 1 with Prisma"]
+        S2["API Server 2 with Prisma"]
+        S3["API Server 3 with Prisma"]
+  end
+ subgraph DATA["Data Layer"]
+    direction TB
+        CACHE["Redis Cache<br>(optional)"]
+        DB["Firebase database primary"]
+        DBR["Firebase read replica"]
+  end
+ subgraph ASYNC["Async Jobs"]
+    direction TB
+        MQ["Message Queue"]
+        W1["Worker 1"]
+        W2["Worker 2"]
+  end
+ subgraph FILES["Files"]
+    direction TB
+        FS["Firebase Storage bucket"]
+  end
+ subgraph OBS["Observability"]
+    direction TB
+        LOGS["Central logs"]
+        METRICS["Metrics"]
+        TRACES["Tracing"]
+        ALERTS["Alerts"]
+  end
+    U["User"] --> UI["Web UI"]
+    UI --> DNS["DNS"]
+    DNS --> CDN["CDN and WAF"]
+    CDN --> RLim["Rate Limiter"]
+    RLim --> LB["Load Balancer"]
+    DNS --- DNS_SPOF["SPOF risk if single DNS"]
+    CDN --- CDN_SPOF["SPOF risk if single CDN region"]
+    RLim --- RL_SPOF["SPOF risk if single rate limiter"]
+    LB --- LB_SPOF["SPOF risk if single load balancer"]
+    UI -- login --> AUTH["Auth Service"]
+    AUTH --> TOK["Token keys and refresh store"]
+    AUTH --- AUTH_SPOF["SPOF risk if single auth instance"]
+    TOK --- TOK_SPOF["SPOF risk if single token store"]
+    LB --> S1 & S2 & S3
+    UI -- bearer token --> RLim
+    S1 -- validate token --> TOK
+    S2 -- validate token --> TOK
+    S3 -- validate token --> TOK
+    S1 --> CACHE & DB & LOGS & METRICS & TRACES
+    S2 --> CACHE & DB & LOGS & METRICS & TRACES
+    S3 --> CACHE & DB & LOGS & METRICS & TRACES
+    DB --> DBR
+    DB --- DB_SPOF["SPOF risk if no HA primary"]
+    CACHE --- CACHE_SPOF["SPOF risk if no redis replica"]
+    S1 -- publish job --> MQ
+    S2 -- publish job --> MQ
+    S3 -- publish job --> MQ
+    MQ --> W1 & W2
+    W1 --> DB & LOGS & METRICS
+    W2 --> DB & LOGS & METRICS
+    MQ --- MQ_SPOF["SPOF risk if queue not HA"]
+    S2 -- create signed url --> FS
+    S2 -- save file metadata --> DB
+    FS --- FS_SPOF["SPOF risk if single bucket region"]
+    METRICS --> ALERTS
+    LOGS --> ALERTS
+
+     DNS_SPOF:::spof
+     CDN_SPOF:::spof
+     RL_SPOF:::spof
+     LB_SPOF:::spof
+     AUTH_SPOF:::spof
+     TOK_SPOF:::spof
+     DB_SPOF:::spof
+     CACHE_SPOF:::spof
+     MQ_SPOF:::spof
+     FS_SPOF:::spof
+    classDef spof stroke:#ff0000,stroke-width:2px,fill:#fff0f0,color:#000

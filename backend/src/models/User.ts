@@ -1,14 +1,12 @@
 import mongoose, { Schema, Document, Model } from 'mongoose';
-import bcrypt from 'bcryptjs';
 
 export interface IUser extends Document {
     name: string;
     email: string;
-    password: string;
+    firebaseUid?: string;
     role?: 'user' | 'admin';
     createdAt: Date;
     updatedAt: Date;
-    comparePassword(candidatePassword: string): Promise<boolean>;
 }
 
 const UserSchema: Schema<IUser> = new Schema(
@@ -26,11 +24,10 @@ const UserSchema: Schema<IUser> = new Schema(
             trim: true,
             match: [/^\S+@\S+\.\S+$/, 'Please provide a valid email'],
         },
-        password: {
+        firebaseUid: {
             type: String,
-            required: [true, 'Please provide a password'],
-            minlength: [6, 'Password must be at least 6 characters'],
-            select: false, // Don't return password by default
+            unique: true,
+            sparse: true,
         },
         role: {
             type: String,
@@ -42,24 +39,6 @@ const UserSchema: Schema<IUser> = new Schema(
         timestamps: true,
     }
 );
-
-// Hash password before saving
-UserSchema.pre('save', async function () {
-    // If password is not modified, skip hashing
-    if (!this.isModified('password')) {
-        return;
-    }
-
-    const salt = await bcrypt.genSalt(10);
-    this.password = await bcrypt.hash(this.password as string, salt);
-});
-
-// Method to compare password
-UserSchema.methods.comparePassword = async function (
-    candidatePassword: string
-): Promise<boolean> {
-    return bcrypt.compare(candidatePassword, this.password);
-};
 
 const User: Model<IUser> = mongoose.models.User || mongoose.model<IUser>('User', UserSchema);
 

@@ -8,7 +8,6 @@ export const getUsers = async (req: Request, res: Response): Promise<void> => {
     try {
         console.log('🔄 Fetching all users from database...');
 
-        // Get all users (without password)
         const users = await User.find({}).select('-password').lean();
 
         // Count total users
