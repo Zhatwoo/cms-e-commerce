@@ -1,6 +1,8 @@
+import dotenv from 'dotenv';
+dotenv.config();
+
 import './observability/tracing';
 import express, { Express, Request, Response } from 'express';
-import dotenv from 'dotenv';
 import cors from 'cors';
 import connectDB from './config/db';
 import authRoutes from './routes/authRoutes';
@@ -12,8 +14,6 @@ import { metricsHandler, metricsMiddleware } from './observability/metrics';
 import { getDependencyHealth } from './controllers/healthController';
 import logger from './utils/logger';
 import { rateLimiter } from './middleware/rateLimiter';
-
-dotenv.config();
 
 const app: Express = express();
 const port = process.env.PORT || 5000;
