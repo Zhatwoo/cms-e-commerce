@@ -78,16 +78,16 @@
 ## Phase 4: File Storage
 
 ### 4.1 Firebase Storage Integration
-- [ ] 4.1.1 Create `backend/src/services/storageService.ts`
-- [ ] 4.1.2 Implement signed URL generation for uploads
-- [ ] 4.1.3 Implement signed URL generation for downloads
-- [ ] 4.1.4 Add file metadata storage in database
+- [x] 4.1.1 Create `backend/src/services/storageService.ts`
+- [x] 4.1.2 Implement signed URL generation for uploads
+- [x] 4.1.3 Implement signed URL generation for downloads
+- [x] 4.1.4 Add file metadata storage in database
 
 ### 4.2 Storage API Endpoints
-- [ ] 4.2.1 Create `backend/src/routes/storageRoutes.ts`
-- [ ] 4.2.2 Add upload URL request endpoint
-- [ ] 4.2.3 Add download URL request endpoint
-- [ ] 4.2.4 Add file metadata CRUD operations
+- [x] 4.2.1 Create `backend/src/routes/storageRoutes.ts`
+- [x] 4.2.2 Add upload URL request endpoint
+- [x] 4.2.3 Add download URL request endpoint
+- [x] 4.2.4 Add file metadata CRUD operations
 
 ---
 

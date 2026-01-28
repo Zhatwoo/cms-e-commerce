@@ -4,6 +4,7 @@ export const FirestoreCollections = {
     orders: 'orders',
     categories: 'categories',
     inventory: 'inventory',
+    files: 'files',
 } as const;
 
 export type FirestoreCollectionName =
@@ -60,6 +61,18 @@ export interface FirestoreInventory {
     sku: string;
     quantity: number;
     reserved?: number;
+    createdAt?: Date;
+    updatedAt?: Date;
+}
+
+export interface FirestoreFile {
+    ownerUid: string;
+    path: string;
+    originalName?: string;
+    contentType?: string;
+    size?: number;
+    status: 'pending' | 'uploaded' | 'failed' | 'deleted';
+    metadata?: Record<string, unknown>;
     createdAt?: Date;
     updatedAt?: Date;
 }

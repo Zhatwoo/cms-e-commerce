@@ -5,6 +5,7 @@ import connectDB from './config/db';
 import authRoutes from './routes/authRoutes';
 import userRoutes from './routes/userRoutes';
 import jobRoutes from './routes/jobRoutes';
+import storageRoutes from './routes/storageRoutes';
 
 dotenv.config();
 
@@ -23,6 +24,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/jobs', jobRoutes);
+app.use('/api/storage', storageRoutes);
 
 app.get('/', (req: Request, res: Response) => {
     res.send('API is running...');
