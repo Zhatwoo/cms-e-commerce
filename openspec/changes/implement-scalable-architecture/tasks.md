@@ -33,24 +33,24 @@
 
 ### 2.1 Firebase Firestore Setup
 - [ ] 2.1.1 Configure Firestore database in Firebase Console
-- [ ] 2.1.2 Create `backend/src/services/firestoreService.ts` for database operations
-- [ ] 2.1.3 Define Firestore collection schemas (users, products, orders, etc.)
-- [ ] 2.1.4 Create data migration scripts from MongoDB to Firestore
-- [ ] 2.1.5 Configure Firestore security rules
-- [ ] 2.1.6 Set up Firestore indexes for compound queries
+- [x] 2.1.2 Create `backend/src/services/firestoreService.ts` for database operations
+- [x] 2.1.3 Define Firestore collection schemas (users, products, orders, etc.)
+- [x] 2.1.4 Create data migration scripts from MongoDB to Firestore
+- [x] 2.1.5 Configure Firestore security rules
+- [x] 2.1.6 Set up Firestore indexes for compound queries
 - [ ] 2.1.7 Deploy Firestore rules and indexes via Firebase CLI
 
 ### 2.2 Redis Cache Layer
-- [ ] 2.2.1 Add Redis service to `docker-compose.yml`
-- [ ] 2.2.2 Install `ioredis` package
-- [ ] 2.2.3 Create `backend/src/config/redis.ts`
-- [ ] 2.2.4 Implement cache service with get/set/invalidate
-- [ ] 2.2.5 Add caching to frequently accessed endpoints
+- [x] 2.2.1 Add Redis service to `docker-compose.yml`
+- [x] 2.2.2 Install `ioredis` package
+- [x] 2.2.3 Create `backend/src/config/redis.ts`
+- [x] 2.2.4 Implement cache service with get/set/invalidate
+- [x] 2.2.5 Add caching to frequently accessed endpoints
 
 ### 2.3 Firestore Data Access Patterns
-- [ ] 2.3.1 Create repository pattern wrappers for Firestore collections
-- [ ] 2.3.2 Implement transaction helpers for multi-document operations
-- [ ] 2.3.3 Add error handling for Firestore-specific errors
+- [x] 2.3.1 Create repository pattern wrappers for Firestore collections
+- [x] 2.3.2 Implement transaction helpers for multi-document operations
+- [x] 2.3.3 Add error handling for Firestore-specific errors
 
 ---
 

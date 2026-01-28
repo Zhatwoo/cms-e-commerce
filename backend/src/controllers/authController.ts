@@ -1,6 +1,9 @@
 import { Request, Response } from 'express';
 import User from '../models/User';
 import { firebaseAuth } from '../config/firebase';
+import { cacheDel } from '../services/cacheService';
+
+const USERS_CACHE_KEY = 'users:all';
 
 interface FirebaseSignInResponse {
     idToken: string;
@@ -93,6 +96,8 @@ export const registerUser = async (req: Request, res: Response): Promise<void> =
                 role,
                 firebaseUid: userRecord.uid,
             });
+
+            await cacheDel(USERS_CACHE_KEY);
 
             res.status(201).json({
                 message: 'User created successfully',
