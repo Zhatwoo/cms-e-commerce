@@ -1,5 +1,6 @@
 import { Request, Response } from 'express';
 import { getQueueByName } from '../queues';
+import logger from '../utils/logger';
 
 export const getJobStatus = async (req: Request, res: Response): Promise<void> => {
     try {
@@ -37,7 +38,7 @@ export const getJobStatus = async (req: Request, res: Response): Promise<void> =
             data: job.data,
         });
     } catch (error: any) {
-        console.error('Job status error:', error);
+        logger.error('job-status-error', { error });
         res.status(500).json({ error: error.message || 'Internal server error' });
     }
 };

@@ -1,6 +1,8 @@
 import { Request, Response } from 'express';
 import User from '../models/User';
 import { cacheGet, cacheSet } from '../services/cacheService';
+import logger from '../utils/logger';
+import { usersTotalGauge } from '../observability/metrics';
 
 const USERS_CACHE_KEY = 'users:all';
 
@@ -9,7 +11,7 @@ const USERS_CACHE_KEY = 'users:all';
 // @access  Private
 export const getUsers = async (req: Request, res: Response): Promise<void> => {
     try {
-        console.log('🔄 Fetching all users from database...');
+        logger.info('users-fetch-start');
 
         const cached = await cacheGet<{
             success: boolean;
@@ -35,6 +37,8 @@ export const getUsers = async (req: Request, res: Response): Promise<void> => {
         // Count total users
         const totalUsers = await User.countDocuments({});
 
+        usersTotalGauge.set(totalUsers);
+
         const responsePayload = {
             success: true,
             message: `✅ Found ${totalUsers} user(s) in database`,
@@ -52,7 +56,7 @@ export const getUsers = async (req: Request, res: Response): Promise<void> => {
         await cacheSet(USERS_CACHE_KEY, responsePayload);
         res.status(200).json(responsePayload);
     } catch (error: any) {
-        console.error('❌ Error fetching users:', error);
+        logger.error('users-fetch-error', { error });
 
         res.status(500).json({
             success: false,

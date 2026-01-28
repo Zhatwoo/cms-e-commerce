@@ -1,6 +1,7 @@
 import { Job, Worker } from 'bullmq';
 import { getQueueConnection } from '../queues/connection';
 import { EmailJobData, EmailJobNames, QueueNames } from '../queues/jobTypes';
+import logger from '../utils/logger';
 
 export const createEmailWorker = () => {
     const worker = new Worker<EmailJobData>(
@@ -8,7 +9,7 @@ export const createEmailWorker = () => {
         async (job: Job<EmailJobData>) => {
             if (job.name === EmailJobNames.welcome) {
                 const { email, name } = job.data;
-                console.log(`📧 Sending welcome email to ${name} <${email}>`);
+                logger.info('welcome-email-send', { name, email });
                 return { delivered: true };
             }
 
@@ -21,11 +22,11 @@ export const createEmailWorker = () => {
     );
 
     worker.on('completed', (job) => {
-        console.log(`✅ Job ${job.id} completed (${job.name})`);
+        logger.info('job-completed', { id: job.id, name: job.name });
     });
 
     worker.on('failed', (job, error) => {
-        console.error(`❌ Job ${job?.id} failed (${job?.name})`, error);
+        logger.error('job-failed', { id: job?.id, name: job?.name, error });
     });
 
     return worker;

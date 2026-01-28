@@ -1,5 +1,7 @@
+import '../observability/tracing';
 import dotenv from 'dotenv';
 import { createEmailWorker } from './emailWorker';
+import logger from '../utils/logger';
 
 dotenv.config();
 
@@ -13,4 +15,4 @@ const shutdown = async () => {
 process.on('SIGINT', shutdown);
 process.on('SIGTERM', shutdown);
 
-console.log('🚀 Worker process started');
+logger.info('worker-started');

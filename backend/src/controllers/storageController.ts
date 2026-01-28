@@ -3,8 +3,11 @@ import { randomUUID } from 'crypto';
 import { FileRepository } from '../repositories/fileRepository';
 import { firestoreFieldValue } from '../services/firestoreService';
 import { deleteStorageFile, getSignedDownloadUrl, getSignedUploadUrl } from '../services/storageService';
+import logger from '../utils/logger';
+import { trace, SpanStatusCode } from '@opentelemetry/api';
 
 const fileRepository = new FileRepository();
+const tracer = trace.getTracer('storage-controller');
 
 const sanitizeFilename = (name: string) =>
     name.replace(/[/\\?%*:|"<>]/g, '-').replace(/\s+/g, '-').trim();
@@ -18,8 +21,10 @@ const isAdmin = (req: Request): boolean => {
 };
 
 export const createUploadUrl = async (req: Request, res: Response): Promise<void> => {
+    const span = tracer.startSpan('createUploadUrl');
     try {
         const ownerUid = getOwnerUid(req);
+        span.setAttribute('owner.uid', ownerUid || '');
         if (!ownerUid) {
             res.status(401).json({ error: 'Unauthorized' });
             return;
@@ -53,8 +58,12 @@ export const createUploadUrl = async (req: Request, res: Response): Promise<void
             expiresAt,
         });
     } catch (error: any) {
-        console.error('Upload URL error:', error);
+        logger.error('upload-url-error', { error });
+        span.recordException(error);
+        span.setStatus({ code: SpanStatusCode.ERROR });
         res.status(500).json({ error: error.message || 'Internal server error' });
+    } finally {
+        span.end();
     }
 };
 
@@ -92,7 +101,7 @@ export const createDownloadUrl = async (req: Request, res: Response): Promise<vo
             expiresAt,
         });
     } catch (error: any) {
-        console.error('Download URL error:', error);
+        logger.error('download-url-error', { error });
         res.status(500).json({ error: error.message || 'Internal server error' });
     }
 };
@@ -112,7 +121,7 @@ export const listFiles = async (req: Request, res: Response): Promise<void> => {
         const files = await fileRepository.listByOwner(targetOwner, limit);
         res.status(200).json({ files });
     } catch (error: any) {
-        console.error('List files error:', error);
+        logger.error('list-files-error', { error });
         res.status(500).json({ error: error.message || 'Internal server error' });
     }
 };
@@ -144,7 +153,7 @@ export const getFile = async (req: Request, res: Response): Promise<void> => {
 
         res.status(200).json({ file: fileRecord });
     } catch (error: any) {
-        console.error('Get file error:', error);
+        logger.error('get-file-error', { error });
         res.status(500).json({ error: error.message || 'Internal server error' });
     }
 };
@@ -189,7 +198,7 @@ export const updateFile = async (req: Request, res: Response): Promise<void> => 
 
         res.status(200).json({ success: true });
     } catch (error: any) {
-        console.error('Update file error:', error);
+        logger.error('update-file-error', { error });
         res.status(500).json({ error: error.message || 'Internal server error' });
     }
 };
@@ -226,7 +235,7 @@ export const deleteFile = async (req: Request, res: Response): Promise<void> => 
         await fileRepository.delete(fileId);
         res.status(200).json({ success: true });
     } catch (error: any) {
-        console.error('Delete file error:', error);
+        logger.error('delete-file-error', { error });
         res.status(500).json({ error: error.message || 'Internal server error' });
     }
 };

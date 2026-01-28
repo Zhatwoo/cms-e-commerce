@@ -2,9 +2,12 @@ import { Request, Response } from 'express';
 import User from '../models/User';
 import { firebaseAuth } from '../config/firebase';
 import { cacheDel } from '../services/cacheService';
+import logger from '../utils/logger';
+import { trace, SpanStatusCode } from '@opentelemetry/api';
 import { publishWelcomeEmail } from '../queues/publishers';
 
 const USERS_CACHE_KEY = 'users:all';
+const tracer = trace.getTracer('auth-controller');
 
 interface FirebaseSignInResponse {
     idToken: string;
@@ -53,8 +56,10 @@ const signInWithFirebase = async (email: string, password: string): Promise<Fire
 // @route   POST /api/auth/register
 // @access  Public
 export const registerUser = async (req: Request, res: Response): Promise<void> => {
+    const span = tracer.startSpan('registerUser');
     try {
         const { name, email, password } = req.body;
+        span.setAttribute('user.email', email || '');
 
         if (!name || !email || !password) {
             res.status(400).json({ error: 'Please provide all required fields' });
@@ -109,7 +114,7 @@ export const registerUser = async (req: Request, res: Response): Promise<void> =
                 });
                 welcomeJobId = job.id?.toString();
             } catch (jobError) {
-                console.error('Failed to enqueue welcome email:', jobError);
+                logger.error('welcome-email-enqueue-failed', { error: jobError });
             }
 
             res.status(201).json({
@@ -129,8 +134,12 @@ export const registerUser = async (req: Request, res: Response): Promise<void> =
             throw dbError;
         }
     } catch (error: any) {
-        console.error('Registration error:', error);
+        logger.error('registration-error', { error });
+        span.recordException(error);
+        span.setStatus({ code: SpanStatusCode.ERROR });
         res.status(500).json({ error: error.message || 'Internal server error' });
+    } finally {
+        span.end();
     }
 };
 
@@ -138,8 +147,10 @@ export const registerUser = async (req: Request, res: Response): Promise<void> =
 // @route   POST /api/auth/login
 // @access  Public
 export const loginUser = async (req: Request, res: Response): Promise<void> => {
+    const span = tracer.startSpan('loginUser');
     try {
         const { email, password } = req.body;
+        span.setAttribute('user.email', email || '');
 
         if (!email || !password) {
             res.status(400).json({ error: 'Email and password are required' });
@@ -184,8 +195,12 @@ export const loginUser = async (req: Request, res: Response): Promise<void> => {
             expiresIn: signInData.expiresIn,
         });
     } catch (error: any) {
-        console.error('Login error:', error);
+        logger.error('login-error', { error });
+        span.recordException(error);
+        span.setStatus({ code: SpanStatusCode.ERROR });
         const status = error?.status || 500;
         res.status(status).json({ error: error.message || 'Internal server error' });
+    } finally {
+        span.end();
     }
 };

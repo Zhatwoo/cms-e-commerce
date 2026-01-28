@@ -1,4 +1,5 @@
 import Redis from 'ioredis';
+import logger from '../utils/logger';
 
 let redisClient: Redis | null = null;
 
@@ -23,7 +24,7 @@ const buildRedisClient = (): Redis | null => {
           });
 
     client.on('error', (error) => {
-        console.error('❌ Redis error:', error);
+        logger.error('redis-error', { error });
     });
 
     return client;

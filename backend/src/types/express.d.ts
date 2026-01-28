@@ -7,6 +7,7 @@ declare global {
                 role?: string;
                 roles?: string[];
             };
+            requestId?: string;
         }
     }
 }

@@ -1,0 +1,35 @@
+groups:
+  - name: cms-backend.rules
+    rules:
+      - alert: HighErrorRate
+        expr: |
+          sum(rate(http_request_errors_total[5m])) 
+          / sum(rate(http_request_duration_seconds_count[5m])) > 0.05
+        for: 10m
+        labels:
+          severity: warning
+          service: cms-backend
+        annotations:
+          summary: High error rate detected
+          description: Error rate over 5% for 10 minutes.
+
+      - alert: HighLatencyP95
+        expr: |
+          histogram_quantile(0.95, sum(rate(http_request_duration_seconds_bucket[5m])) by (le)) > 1
+        for: 10m
+        labels:
+          severity: warning
+          service: cms-backend
+        annotations:
+          summary: High request latency detected
+          description: 95th percentile latency > 1s for 10 minutes.
+
+      - alert: BackendInstanceDown
+        expr: up{job="cms-backend"} == 0
+        for: 5m
+        labels:
+          severity: critical
+          service: cms-backend
+        annotations:
+          summary: Backend instance down
+          description: Prometheus is not scraping the backend target.
