@@ -8,6 +8,7 @@
     "dev": "nodemon src/index.ts",
     "build": "tsc",
     "start": "node dist/index.js",
+    "worker": "node dist/workers/index.js",
     "migrate:firestore": "ts-node src/scripts/migrateMongoToFirestore.ts"
   },
   "keywords": [],
@@ -19,6 +20,7 @@
     "dotenv": "^17.2.3",
     "express": "^5.2.1",
     "firebase-admin": "^12.7.0",
+    "bullmq": "^5.27.0",
     "ioredis": "^5.6.1",
     "mongoose": "^9.1.5"
   },

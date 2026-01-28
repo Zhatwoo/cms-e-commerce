@@ -2,6 +2,7 @@ import { Request, Response } from 'express';
 import User from '../models/User';
 import { firebaseAuth } from '../config/firebase';
 import { cacheDel } from '../services/cacheService';
+import { publishWelcomeEmail } from '../queues/publishers';
 
 const USERS_CACHE_KEY = 'users:all';
 
@@ -99,6 +100,18 @@ export const registerUser = async (req: Request, res: Response): Promise<void> =
 
             await cacheDel(USERS_CACHE_KEY);
 
+            let welcomeJobId: string | undefined;
+            try {
+                const job = await publishWelcomeEmail({
+                    userId: user._id.toString(),
+                    email: user.email,
+                    name: user.name,
+                });
+                welcomeJobId = job.id?.toString();
+            } catch (jobError) {
+                console.error('Failed to enqueue welcome email:', jobError);
+            }
+
             res.status(201).json({
                 message: 'User created successfully',
                 user: {
@@ -109,6 +122,7 @@ export const registerUser = async (req: Request, res: Response): Promise<void> =
                     firebaseUid: user.firebaseUid,
                     createdAt: user.createdAt,
                 },
+                welcomeJobId,
             });
         } catch (dbError) {
             await auth.deleteUser(userRecord.uid);
