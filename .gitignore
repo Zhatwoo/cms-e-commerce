@@ -1,0 +1,5 @@
+
+# Firebase Admin SDK credentials
+*.json
+frontend/public/*.json
+backend/*.json

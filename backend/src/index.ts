@@ -1,14 +1,24 @@
-import express, { Express, Request, Response } from 'express';
 import dotenv from 'dotenv';
+dotenv.config();
+
+import './observability/tracing';
+import express, { Express, Request, Response } from 'express';
 import cors from 'cors';
 import connectDB from './config/db';
 import authRoutes from './routes/authRoutes';
 import userRoutes from './routes/userRoutes';
-
-dotenv.config();
+import jobRoutes from './routes/jobRoutes';
+import storageRoutes from './routes/storageRoutes';
+import { requestLogger } from './middleware/requestLogger';
+import { metricsHandler, metricsMiddleware } from './observability/metrics';
+import { getDependencyHealth } from './controllers/healthController';
+import logger from './utils/logger';
+import { rateLimiter } from './middleware/rateLimiter';
 
 const app: Express = express();
 const port = process.env.PORT || 5000;
+
+app.set('trust proxy', 1);
 
 // Connect to Database
 connectDB();
@@ -17,10 +27,16 @@ connectDB();
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(requestLogger);
+app.use(metricsMiddleware);
+app.use(rateLimiter);
 
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
+app.use('/api/jobs', jobRoutes);
+app.use('/api/storage', storageRoutes);
+app.get('/metrics', metricsHandler);
 
 app.get('/', (req: Request, res: Response) => {
     res.send('API is running...');
@@ -36,6 +52,8 @@ app.get('/health', (req: Request, res: Response) => {
     });
 });
 
+app.get('/health/dependencies', getDependencyHealth);
+
 app.listen(port, () => {
-    console.log(`⚡️ [server]: Server is running at http://localhost:${port}`);
+    logger.info('server-started', { port });
 });
