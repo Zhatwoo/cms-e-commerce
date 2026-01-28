@@ -1,9 +1,10 @@
 import { redirect } from 'next/navigation';
-import { getCurrentUser } from '@/lib/auth';
+import { auth } from '@/lib/auth';
 import { AuthButton } from '@/components/auth-button';
 
 export default async function ProfilePage() {
-  const user = await getCurrentUser();
+  const session = await auth();
+  const user = session?.user;
 
   if (!user) {
     redirect('/auth/login');
