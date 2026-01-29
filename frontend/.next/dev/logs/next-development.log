@@ -1,0 +1,218 @@
+[00:00:02.913] Server  WARN    ⚠ Duplicate page detected. src/app/api/auth/[...nextauth]/route.js and src/app/api/auth/[...nextauth]/route.ts resolve to /api/auth/[...nextauth]
+[00:00:02.913] Server  WARN    ⚠ Duplicate page detected. src/app/api/auth/[...nextauth]/route.js and src/app/api/auth/[...nextauth]/route.ts resolve to /api/auth/[...nextauth]
+[00:00:02.914] Server  LOG     ✓ Ready in 2.6s
+[00:00:06.001] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:06.018] Server  ERROR   (node:87884) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[00:00:06.023] Server  ERROR   Failed to proxy http://localhost:5000/api/auth/session AggregateError
+[00:00:06.025] Server  ERROR   AggregateError
+[00:00:06.158] Server  ERROR   Failed to proxy http://localhost:5000/api/auth/session AggregateError
+[00:00:06.159] Server  ERROR   AggregateError
+[00:00:06.266] Browser ERROR   {"kind":"error","name":"ClientFetchError","type":"AuthError"}
+[00:00:06.266] Browser ERROR   {"kind":"error","name":"ClientFetchError","type":"AuthError"}
+[00:00:09.583] Browser WARN    Image with src "/b3af34c2c26f6abd6e071a9bb63bf0bd30ab8e5f.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:09.583] Browser WARN    Image with src "/53030d137532ba9ebe957e215b9f12359626d73f.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:13.402] Browser WARN    Image with src "/a6aecac5846f117f3c886e34bccaeac3d4920579.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:13.402] Browser WARN    Image with src "/0c0effe8ed665936fb95ad380db1b35b2129f967.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:13.402] Browser WARN    Image with src "/4bbb146260379cd1fbea5a9afa3f9b66fa9091d4.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:18.186] Browser WARN    Image with src "/12daa53dadb8e6773c1817d0b2eefe5bb113b979.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:18.351] Browser WARN    Image with src "/271552771aec4da87bb7e8aafd0c5bdf201cdd0a.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:18.351] Browser WARN    Image with src "/cad203cae6b1eb766de84b771c166580a3dad46d.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:18.468] Browser WARN    Image with src "/2e855804e1e2b3a9aaa50e206da49e5cc18564a8.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:56.368] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:56.388] Server  ERROR   Failed to proxy http://localhost:5000/api/auth/session AggregateError
+[00:00:56.389] Server  ERROR   AggregateError
+[00:00:56.411] Server  ERROR   Failed to proxy http://localhost:5000/api/auth/session AggregateError
+[00:00:56.413] Server  ERROR   AggregateError
+[00:00:56.514] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/client" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <body
+                            className="geist_a71539c9-module__T19VSG__variable geist_mono_8d43a2aa-module__8Li5zG__var..."
+-                           cz-shortcut-listen="true"
+                          >
+                  ...
+
+[00:00:56.514] Browser ERROR   {"kind":"error","name":"ClientFetchError","type":"AuthError"}
+[00:00:56.514] Browser ERROR   {"kind":"error","name":"ClientFetchError","type":"AuthError"}
+[00:01:07.551] Server  WARN    ⚠ Duplicate page detected. src/app/api/auth/[...nextauth]/route.js and src/app/api/auth/[...nextauth]/route.ts resolve to /api/auth/[...nextauth]
+[00:01:08.168] Server  ERROR   ⨯ Error: The default export is not a React Component in "/client/page"
+[00:01:08.314] Server  ERROR   ⨯ Error: The default export is not a React Component in "/client/page"
+[00:01:08.581] Server  ERROR   ⨯ Error: The default export is not a React Component in "/client/page"
+[00:01:08.720] Server  ERROR   ⨯ Error: The default export is not a React Component in "/client/page"
+[00:01:08.861] Server  ERROR   ⨯ Error: The default export is not a React Component in "/client/page"
+[00:01:08.981] Server  ERROR   ⨯ Error: The default export is not a React Component in "/client/page"
+[00:01:09.130] Server  ERROR   ⨯ Error: The default export is not a React Component in "/client/page"
+[00:01:09.255] Server  ERROR   ⨯ Error: The default export is not a React Component in "/client/page"
+[00:01:09.352] Browser ERROR   uncaughtError: Error: The default export is not a React Component in "/client/page"
+[00:02:49.120] Server  LOG     ✓ Compiled in 138ms
+[00:02:49.483] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:49.515] Server  ERROR   Failed to proxy http://localhost:5000/api/auth/session AggregateError
+[00:02:49.517] Server  ERROR   AggregateError
+[00:02:49.540] Server  ERROR   Failed to proxy http://localhost:5000/api/auth/session AggregateError
+[00:02:49.541] Server  ERROR   AggregateError
+[00:02:49.642] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/client" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <body
+                            className="geist_a71539c9-module__T19VSG__variable geist_mono_8d43a2aa-module__8Li5zG__var..."
+-                           cz-shortcut-listen="true"
+                          >
+                  ...
+
+[00:02:49.642] Browser ERROR   {"kind":"error","name":"ClientFetchError","type":"AuthError"}
+[00:02:49.642] Browser ERROR   {"kind":"error","name":"ClientFetchError","type":"AuthError"}
+[00:06:38.640] Server  LOG     ✓ Compiled in 287ms
+[00:09:26.215] Server  LOG     ✓ Compiled in 185ms
+[00:11:22.123] Server  LOG     ✓ Compiled in 162ms
+[00:14:16.599] Server  LOG     ✓ Compiled in 161ms
+[00:14:25.662] Server  LOG     ✓ Compiled in 110ms
+[00:14:44.359] Server  LOG     ✓ Compiled in 101ms
+[00:16:49.363] Server  LOG     ✓ Compiled in 127ms
+[00:18:25.797] Server  LOG     ✓ Compiled in 139ms
+[00:19:37.910] Server  LOG     ✓ Compiled in 66ms
+[00:20:43.249] Server  LOG     ✓ Compiled in 60ms
+[00:21:48.499] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:21:48.524] Server  ERROR   Failed to proxy http://localhost:5000/api/auth/session AggregateError
+[00:21:48.525] Server  ERROR   AggregateError
+[00:21:48.538] Server  ERROR   Failed to proxy http://localhost:5000/api/auth/session AggregateError
+[00:21:48.538] Server  ERROR   AggregateError
+[00:21:48.640] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/client" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <body
+                            className="geist_a71539c9-module__T19VSG__variable geist_mono_8d43a2aa-module__8Li5zG__var..."
+-                           cz-shortcut-listen="true"
+                          >
+                  ...
+
+[00:21:48.640] Browser ERROR   {"kind":"error","name":"ClientFetchError","type":"AuthError"}
+[00:21:48.640] Browser ERROR   {"kind":"error","name":"ClientFetchError","type":"AuthError"}
+[00:22:23.352] Server  LOG     ✓ Compiled in 75ms
+[00:22:38.187] Server  LOG     ✓ Compiled in 48ms
+[00:25:09.014] Server  LOG     ✓ Compiled in 69ms
+[00:28:33.933] Server  LOG     ✓ Compiled in 291ms
+[00:28:34.369] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:28:34.369] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/client" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <body
+                            className="geist_a71539c9-module__T19VSG__variable geist_mono_8d43a2aa-module__8Li5zG__var..."
+-                           cz-shortcut-listen="true"
+                          >
+                  ...
+
+[00:28:34.407] Server  ERROR   Failed to proxy http://localhost:5000/api/auth/session AggregateError
+[00:28:34.411] Server  ERROR   AggregateError
+[00:28:34.444] Server  ERROR   Failed to proxy http://localhost:5000/api/auth/session AggregateError
+[00:28:34.447] Server  ERROR   AggregateError
+[00:28:34.549] Browser ERROR   {"kind":"error","name":"ClientFetchError","type":"AuthError"}
+[00:28:34.549] Browser ERROR   {"kind":"error","name":"ClientFetchError","type":"AuthError"}

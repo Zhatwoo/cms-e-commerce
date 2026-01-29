@@ -65,7 +65,7 @@ export const ParallaxText: React.FC<ParallaxTextProps> = ({
   children,
   className = '',
   staggerDelay = 50,
-  as: Tag = 'span',
+  as: Tag = 'span' as 'span',
 }) => {
   const { ref, triggered } = useScrollTriggered(100);
   const words = children.split(' ');

@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import { AuthButton } from "./auth-button";
+import Link from 'next/link';
+import { AuthButton } from './auth-button';
 
 export function Navbar() {
   return (
@@ -20,9 +20,7 @@ export function Navbar() {
             </Link>
           </div>
         </div>
-        <div className="flex items-center gap-4">
-          <AuthButton />
-        </div>
+        <AuthButton />
       </div>
     </nav>
   );
