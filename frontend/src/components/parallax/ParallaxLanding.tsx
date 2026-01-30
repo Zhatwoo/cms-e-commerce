@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 
 // ============================================================================
@@ -15,6 +15,8 @@ export const ParallaxLanding: React.FC = () => {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+    
     setMounted(true);
 
     const handleScroll = () => {
@@ -44,8 +46,8 @@ export const ParallaxLanding: React.FC = () => {
 
   if (!mounted) return null;
 
-  const mouseX = (mousePos.x / window.innerWidth - 0.5) * 20;
-  const mouseY = (mousePos.y / window.innerHeight - 0.5) * 20;
+  const windowWidth = typeof window !== 'undefined' ? window.innerWidth : 1920;
+  const mouseX = windowWidth > 0 ? (mousePos.x / windowWidth - 0.5) * 20 : 0;
 
   return (
     <div className="relative bg-black overflow-x-hidden">

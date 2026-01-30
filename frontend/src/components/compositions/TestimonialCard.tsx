@@ -1,4 +1,7 @@
+'use client';
+
 import React from 'react';
+import Image from 'next/image';
 
 interface TestimonialCardProps {
     heading: string;
@@ -12,8 +15,16 @@ export const TestimonialCard: React.FC<TestimonialCardProps> = ({ heading, src, 
         <div className="max-w-sm bg-blue-900/40 backdrop-blur-md border border-blue-500/50 p-6 rounded-lg shadow-xl">
             <h3 className="text-lg font-semibold mb-2">{heading}</h3>
             <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gray-300 overflow-hidden">
-                    {src && <img src={src} alt={name} className="w-full h-full object-cover" />}
+                <div className="relative w-10 h-10 rounded-full bg-gray-300 overflow-hidden">
+                    {src && (
+                        <Image
+                            src={src}
+                            alt={name}
+                            fill
+                            className="object-cover"
+                            sizes="40px"
+                        />
+                    )}
                 </div>
                 <div>
                     <p className="font-medium text-sm">{name}</p>

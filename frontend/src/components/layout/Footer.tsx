@@ -12,14 +12,19 @@ export const Footer = () => {
                     {/* Social Icons */}
                     <div className="flex gap-4">
                         {[
-                            'X', // Twitter/X icon placeholder
-                            'Ig', // Instagram
-                            'Yt', // YouTube
-                            'In'  // LinkedIn
+                            { name: 'X', label: 'Twitter/X' },
+                            { name: 'Ig', label: 'Instagram' },
+                            { name: 'Yt', label: 'YouTube' },
+                            { name: 'In', label: 'LinkedIn' },
                         ].map((icon, i) => (
-                            <div key={i} className="w-6 h-6 flex items-center justify-center border border-white/50 rounded text-[10px] hover:border-white transition cursor-pointer">
-                                {icon}
-                            </div>
+                            <button
+                                key={i}
+                                type="button"
+                                aria-label={icon.label}
+                                className="w-6 h-6 flex items-center justify-center border border-white/50 rounded text-[10px] hover:border-white transition cursor-pointer"
+                            >
+                                {icon.name}
+                            </button>
                         ))}
                     </div>
                 </div>
@@ -29,7 +34,14 @@ export const Footer = () => {
                     <h4 className="font-bold mb-6">Use cases</h4>
                     <ul className="space-y-4 text-sm text-gray-400">
                         {['UI design', 'UX design', 'Wireframing', 'Diagramming', 'Brainstorming', 'Online whiteboard', 'Team collaboration'].map(item => (
-                            <li key={item}><a href="#" className="hover:text-white transition">{item}</a></li>
+                            <li key={item}>
+                                <button
+                                    type="button"
+                                    className="hover:text-white transition text-left"
+                                >
+                                    {item}
+                                </button>
+                            </li>
                         ))}
                     </ul>
                 </div>
@@ -39,7 +51,14 @@ export const Footer = () => {
                     <h4 className="font-bold mb-6">Explore</h4>
                     <ul className="space-y-4 text-sm text-gray-400">
                         {['Design', 'Prototyping', 'Development features', 'Design systems', 'Collaboration features', 'Design process', 'FigJam'].map(item => (
-                            <li key={item}><a href="#" className="hover:text-white transition">{item}</a></li>
+                            <li key={item}>
+                                <button
+                                    type="button"
+                                    className="hover:text-white transition text-left"
+                                >
+                                    {item}
+                                </button>
+                            </li>
                         ))}
                     </ul>
                 </div>
@@ -49,7 +68,14 @@ export const Footer = () => {
                     <h4 className="font-bold mb-6">Resources</h4>
                     <ul className="space-y-4 text-sm text-gray-400">
                         {['Blog', 'Best practices', 'Colors', 'Color wheel', 'Support', 'Developers', 'Resource library'].map(item => (
-                            <li key={item}><a href="#" className="hover:text-white transition">{item}</a></li>
+                            <li key={item}>
+                                <button
+                                    type="button"
+                                    className="hover:text-white transition text-left"
+                                >
+                                    {item}
+                                </button>
+                            </li>
                         ))}
                     </ul>
                 </div>
