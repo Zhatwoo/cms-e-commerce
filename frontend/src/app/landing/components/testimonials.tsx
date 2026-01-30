@@ -1,6 +1,7 @@
 'use client';
 
 import dynamic from 'next/dynamic';
+import { useScrollGate } from './ScrollGate';
 
 const Globe3D = dynamic(
   () => import('./Globe3D').then((m) => m.Globe3D),
@@ -8,9 +9,15 @@ const Globe3D = dynamic(
 );
 
 export function Testimonials() {
+  const { progress: stackProgressRaw, allowInnerScroll } = useScrollGate();
+  const stackProgress = allowInnerScroll ? stackProgressRaw : 0;
+  const stackStyle = {
+    transform: `translateY(${Math.max(40 - stackProgress * 40, 0)}px)`,
+    transition: 'transform 320ms cubic-bezier(.2,.9,.2,1)',
+  };
 
   return (
-    <section className="relative w-full overflow-hidden px-6 py-16 pb-48 md:px-10 md:py-24 md:pb-64" style={{ backgroundColor: '#020205' }}>
+    <section className="relative w-full overflow-hidden px-6 py-16 pb-48 md:px-10 md:py-24 md:pb-64" style={{ ...stackStyle, backgroundColor: '#020205' }}>
       {/* Gradient background with clip-path — raised 10% from previous */}
       <div
         className="absolute inset-0 z-0 w-full"

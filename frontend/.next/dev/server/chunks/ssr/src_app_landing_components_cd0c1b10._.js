@@ -1546,7 +1546,7 @@ function Testimonials() {
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "absolute inset-0 z-0 w-full",
                 style: {
-                    background: 'linear-gradient(to right, #06143E 0%, transparent 50%), linear-gradient(to bottom, #0a2a7a 0%, #020b2a 28%, #020205 58%, #020205 100%)',
+                    background: 'linear-gradient(to right, #020205 0%, #030510 25%, transparent 50%), linear-gradient(to bottom, #0a2a7a 0%, #020b2a 28%, #020205 58%, #020205 100%)',
                     clipPath: 'polygon(0 20%, 100% 5%, 100% 100%, 0 100%)',
                     transform: 'translateY(10%)'
                 },
@@ -1592,10 +1592,10 @@ function Testimonials() {
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "absolute left-[100%] top-24 z-10 -translate-x-1/2 -translate-y-[5%] md:top-32",
+                                className: "absolute left-full top-24 z-10 -translate-x-1/2 -translate-y-[5%] md:top-32",
                                 "aria-hidden": true,
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "relative aspect-square h-[64rem] w-[64rem] scale-[1.25] overflow-hidden rounded-full md:h-[80rem] md:w-[80rem]",
+                                    className: "relative aspect-square h-256 w-5xl scale-[2] overflow-hidden rounded-full md:h-320 md:w-7xl",
                                     style: {
                                         isolation: 'isolate'
                                     },

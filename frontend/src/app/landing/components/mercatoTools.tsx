@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { useScrollGate } from './ScrollGate';
 
 const ELEMENTS = [
   'Text',
@@ -136,6 +137,15 @@ function useScrollProgress() {
 export function MercatoTools() {
   const { sectionRef, progressIn, progressOut } = useScrollProgress();
 
+  const { progress: stackProgressRaw, allowInnerScroll } = useScrollGate();
+  const stackProgress = allowInnerScroll ? stackProgressRaw : 0;
+  const stackStyle = {
+    transform: `translateY(${ -stackProgress * 36 }px) scale(${1 - stackProgress * 0.02})`,
+    opacity: 1 - stackProgress * 0.12,
+    transition: 'transform 300ms cubic-bezier(.2,.9,.2,1), opacity 300ms ease',
+    willChange: 'transform, opacity',
+  };
+
   const dissolveOut = 1 - progressOut;
   const opacity = progressIn * dissolveOut;
 
@@ -158,7 +168,7 @@ export function MercatoTools() {
   };
 
   return (
-    <section ref={sectionRef} className="w-full px-6 py-16 md:px-10 md:py-24">
+    <section ref={sectionRef} className="w-full px-6 py-16 md:px-10 md:py-24" style={stackStyle}>
       <div className="mx-auto max-w-6xl">
         {/* Title and subtitle - in from bottom */}
         <div className="mx-auto max-w-3xl text-center" style={moveInOut(0)}>

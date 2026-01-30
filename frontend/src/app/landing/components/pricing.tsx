@@ -1,5 +1,7 @@
 'use client';
 
+import { useEffect, useRef, useState } from 'react';
+
 const CARD_FEATURES = [
   'List item',
   'List item',
@@ -8,9 +10,44 @@ const CARD_FEATURES = [
   'List item',
 ];
 
+const ENTRANCE_OFFSET_Y = 80;
+
 export function Pricing() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const [entranceProgress, setEntranceProgress] = useState(0);
+
+  // Pricing is in window scroll (second scroll system); use viewport for entrance
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          const ratio = entry.intersectionRatio;
+          setEntranceProgress((p) => Math.max(p, ratio));
+        }
+      },
+      { root: null, rootMargin: '0px', threshold: [0, 0.2, 0.4, 0.6, 0.8, 1] }
+    );
+    observer.observe(section);
+    return () => observer.disconnect();
+  }, []);
+
+  const entranceY = (1 - entranceProgress) * ENTRANCE_OFFSET_Y;
+  const opacity = 0.7 + 0.3 * entranceProgress;
+
   return (
-    <section className="w-full px-6 py-16 md:px-10 md:py-24" style={{ backgroundColor: '#020205' }}>
+    <section
+      ref={sectionRef}
+      className="w-full rounded-t-3xl px-6 py-16 md:px-10 md:py-24 transition-all duration-500 ease-out"
+      style={{
+        backgroundColor: '#020205',
+        transform: `translateY(${entranceY}px)`,
+        opacity,
+        willChange: 'transform, opacity',
+      }}
+    >
       <div className="mx-auto max-w-6xl">
         {/* Main title */}
         <h2 className="mx-auto max-w-3xl text-center text-4xl font-bold leading-tight tracking-tight text-white md:text-5xl">

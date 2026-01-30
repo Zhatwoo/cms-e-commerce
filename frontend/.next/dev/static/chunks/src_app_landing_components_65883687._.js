@@ -2510,11 +2510,11 @@ const Globe3D = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules
 _c = Globe3D;
 function Testimonials() {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(10);
-    if ($[0] !== "10cd35a7799702e02144f705b10515cfd3fc5cfd7dcb3f1552bd80a8e470603a") {
+    if ($[0] !== "8d95cc77c90673c641029ee97abd4cfe8f19e6057e421d200908128c5cbb5bad") {
         for(let $i = 0; $i < 10; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "10cd35a7799702e02144f705b10515cfd3fc5cfd7dcb3f1552bd80a8e470603a";
+        $[0] = "8d95cc77c90673c641029ee97abd4cfe8f19e6057e421d200908128c5cbb5bad";
     }
     let t0;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
@@ -2530,7 +2530,7 @@ function Testimonials() {
         t1 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "absolute inset-0 z-0 w-full",
             style: {
-                background: "linear-gradient(to right, #06143E 0%, transparent 50%), linear-gradient(to bottom, #0a2a7a 0%, #020b2a 28%, #020205 58%, #020205 100%)",
+                background: "linear-gradient(to right, #020205 0%, #030510 25%, transparent 50%), linear-gradient(to bottom, #0a2a7a 0%, #020b2a 28%, #020205 58%, #020205 100%)",
                 clipPath: "polygon(0 20%, 100% 5%, 100% 100%, 0 100%)",
                 transform: "translateY(10%)"
             },
@@ -2605,10 +2605,10 @@ function Testimonials() {
             children: [
                 t2,
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "absolute left-[100%] top-24 z-10 -translate-x-1/2 -translate-y-[5%] md:top-32",
+                    className: "absolute left-full top-24 z-10 -translate-x-1/2 -translate-y-[5%] md:top-32",
                     "aria-hidden": true,
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "relative aspect-square h-[64rem] w-[64rem] scale-[1.25] overflow-hidden rounded-full md:h-[80rem] md:w-[80rem]",
+                        className: "relative aspect-square h-256 w-5xl scale-[2] overflow-hidden rounded-full md:h-320 md:w-7xl",
                         style: t3,
                         children: [
                             t4,
@@ -2621,13 +2621,13 @@ function Testimonials() {
                             }, void 0, false, {
                                 fileName: "[project]/src/app/landing/components/testimonials.tsx",
                                 lineNumber: 58,
-                                columnNumber: 297
+                                columnNumber: 276
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/landing/components/testimonials.tsx",
                         lineNumber: 58,
-                        columnNumber: 154
+                        columnNumber: 152
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/app/landing/components/testimonials.tsx",

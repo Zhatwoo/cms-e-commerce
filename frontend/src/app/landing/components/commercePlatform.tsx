@@ -120,11 +120,14 @@ export function CommercePlatform() {
   return (
     <section
       ref={sectionRef}
-      className="w-full px-6 py-16 md:px-10 md:py-24"
+      className="w-full bg-transparent pb-16 pt-0 md:pb-24 md:pt-0"
     >
-      <div className="mx-auto max-w-6xl">
-        {/* Header - scroll-driven in (from below) / out (dissolve) */}
-        <div className="mx-auto max-w-3xl text-center" style={moveInOut(0)}>
+      {/* Full-width teal block with rounded top so corners are visible */}
+      <div
+        className="w-full rounded-t-3xl px-6 py-12 md:px-10 md:py-16"
+        style={{ ...moveInOut(0), backgroundColor: '#0A2727' }}
+      >
+        <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl lg:text-5xl">
             The commerce platform behind everything we build
           </h2>
@@ -136,7 +139,9 @@ export function CommercePlatform() {
             Everything you need to create, manage, and grow your store.
           </p>
         </div>
+      </div>
 
+      <div className="mx-auto max-w-6xl px-6 md:px-10">
         {/* Browser mockups - staggered parallax move in */}
         <div className="mt-16 grid gap-6 md:mt-20 md:grid-cols-3 md:gap-8">
           {/* Left: Stock / creative - in from left, out dissolve */}

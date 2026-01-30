@@ -10,15 +10,17 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen">
       <Hero />
+      {/* First scroll system: CommercePlatform + MercatoTools inside gate */}
       <ScrollGate>
         <CommercePlatform />
         <MercatoTools />
-        <div className="relative z-20 -mt-[5vh] rounded-t-4xl bg-black">
-          <Pricing />
-          <Testimonials />
-          <Footer />
-        </div>
       </ScrollGate>
+      {/* Second scroll system: Pricing layer (window scroll, separate from gate) */}
+      <div className="relative z-20 -mt-[20vh] overflow-visible rounded-t-3xl bg-[#020205]">
+        <Pricing />
+        <Testimonials />
+        <Footer />
+      </div>
     </div>
   );
 }
