@@ -13,8 +13,9 @@ export function AppShell({ children }: AppShellProps) {
   const pathname = usePathname();
 
   const isClientArea = pathname?.startsWith('/client');
+  const isLandingArea = pathname?.startsWith('/landing');
 
-  if (isClientArea) {
+  if (isClientArea || isLandingArea) {
     return <>{children}</>;
   }
 

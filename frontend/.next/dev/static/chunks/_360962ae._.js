@@ -625,16 +625,17 @@ var _s = __turbopack_context__.k.signature();
 function AppShell(t0) {
     _s();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(9);
-    if ($[0] !== "3cf961af680f625c2e413b655fcaed3db9307bd410c2bb5197707bb2b5b12ebe") {
+    if ($[0] !== "555909200c0c44097c232c33ae505e15fff6e4fdc3d9498584e5f65f8969eee1") {
         for(let $i = 0; $i < 9; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "3cf961af680f625c2e413b655fcaed3db9307bd410c2bb5197707bb2b5b12ebe";
+        $[0] = "555909200c0c44097c232c33ae505e15fff6e4fdc3d9498584e5f65f8969eee1";
     }
     const { children } = t0;
     const pathname = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["usePathname"])();
     const isClientArea = pathname?.startsWith("/client");
-    if (isClientArea) {
+    const isLandingArea = pathname?.startsWith("/landing");
+    if (isClientArea || isLandingArea) {
         let t1;
         if ($[1] !== children) {
             t1 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -651,7 +652,7 @@ function AppShell(t0) {
     if ($[3] === Symbol.for("react.memo_cache_sentinel")) {
         t1 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Navbar$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Navbar"], {}, void 0, false, {
             fileName: "[project]/src/components/AppShell.tsx",
-            lineNumber: 37,
+            lineNumber: 38,
             columnNumber: 10
         }, this);
         $[3] = t1;
@@ -665,7 +666,7 @@ function AppShell(t0) {
             children: children
         }, void 0, false, {
             fileName: "[project]/src/components/AppShell.tsx",
-            lineNumber: 44,
+            lineNumber: 45,
             columnNumber: 10
         }, this);
         $[4] = children;
@@ -677,7 +678,7 @@ function AppShell(t0) {
     if ($[6] === Symbol.for("react.memo_cache_sentinel")) {
         t3 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$layout$2f$Footer$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Footer"], {}, void 0, false, {
             fileName: "[project]/src/components/AppShell.tsx",
-            lineNumber: 52,
+            lineNumber: 53,
             columnNumber: 10
         }, this);
         $[6] = t3;
