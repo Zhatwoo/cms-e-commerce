@@ -21,7 +21,7 @@ export const PricingCard: React.FC<PricingCardProps> = ({
     onAction,
     listSlot,
     price,
-    priceLabel
+    priceLabel,
 }) => {
     return (
         <div className="bg-gradient-to-b from-blue-900/40 to-black/80 backdrop-blur-md border border-blue-500/30 rounded-3xl p-8 flex flex-col items-center text-center group hover:border-blue-500/60 transition duration-300 w-full max-w-sm">
@@ -43,5 +43,10 @@ export const PricingCard: React.FC<PricingCardProps> = ({
     );
 };
 
-export const TextList = ({ children, density }: { children: React.ReactNode, density?: string }) => <ul className={`space-y-3 ${density === 'compact' ? 'space-y-1' : ''}`}>{children}</ul>;
-export const TextListItem = ({ children }: { children: React.ReactNode }) => <li className="list-disc">{children}</li>;
+export const TextList: React.FC<{ children: React.ReactNode; density?: string }> = ({ children, density }) => (
+    <ul className={`space-y-3 ${density === 'compact' ? 'space-y-1' : ''}`}>{children}</ul>
+);
+
+export const TextListItem: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+    <li className="list-disc">{children}</li>
+);

@@ -3,10 +3,8 @@
 import React from 'react';
 import Image from 'next/image';
 import { ParallaxSection, FloatingElement } from '@/components/parallax/ParallaxSection';
-import { useParallax } from '@/hooks/useParallax';
 
 export const FeaturesSection = () => {
-    const { scrollY } = useParallax();
 
     return (
         <section className="relative bg-transparent text-white py-32 px-4 md:px-8 lg:px-16 overflow-hidden" id="features">

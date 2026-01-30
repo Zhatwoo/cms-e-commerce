@@ -1,0 +1,5 @@
+Element,Hex Code,Usage
+Pure White,#FFFFFF,"Backgrounds (Light Mode), Text (Dark Mode)"
+Pure Black,#000000,"Backgrounds (Dark Mode), Logos, Primary Buttons"
+Gray (Selection),#666666,"Secondary Text, Borders, and Dividers"
+Accent Blue,#0070F3,"Primary Links, Focus states, and ""Next.js Blue"""

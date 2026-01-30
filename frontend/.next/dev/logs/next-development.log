@@ -1,0 +1,17 @@
+[00:00:00.941] Server  WARN    ⚠ Duplicate page detected. src/app/api/auth/[...nextauth]/route.js and src/app/api/auth/[...nextauth]/route.ts resolve to /api/auth/[...nextauth]
+[00:00:00.941] Server  WARN    ⚠ Duplicate page detected. src/app/api/auth/[...nextauth]/route.js and src/app/api/auth/[...nextauth]/route.ts resolve to /api/auth/[...nextauth]
+[00:00:00.941] Server  LOG     ✓ Ready in 708ms
+[00:00:01.014] Browser ERROR   {"kind":"error","name":"ClientFetchError","type":"AuthError"}
+[00:00:01.014] Browser ERROR   uncaughtError: ChunkLoadError: Failed to load chunk /_next/static/chunks/src_app_landing_components_Globe3D_tsx_20b0165f._.js from module [project]/src/app/landing/components/Globe3D.tsx [app-client] (ecmascript, next/dynamic entry, async loader)
+[00:00:01.014] Browser ERROR   {"kind":"error","name":"ClientFetchError","type":"AuthError"}
+[00:00:03.600] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:03.678] Server  ERROR   (node:41859) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[00:00:03.700] Server  ERROR   Failed to proxy http://localhost:5000/api/auth/session AggregateError
+[00:00:03.708] Server  ERROR   AggregateError
+[00:00:03.759] Server  ERROR   Failed to proxy http://localhost:5000/api/auth/session AggregateError
+[00:00:03.765] Server  ERROR   AggregateError
+[00:00:03.908] Browser ERROR   {"kind":"error","name":"ClientFetchError","type":"AuthError"}
+[00:00:03.908] Browser ERROR   {"kind":"error","name":"ClientFetchError","type":"AuthError"}
+[00:00:06.702] Browser WARN    THREE.Color: Alpha component of rgba(120, 140, 255, 0.6) will be ignored.
+[00:00:06.702] Browser WARN    THREE.Color: Alpha component of rgba(120, 140, 255, 0.6) will be ignored.

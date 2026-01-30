@@ -2,10 +2,8 @@
 
 import React from 'react';
 import { ParallaxSection, FloatingElement } from '@/components/parallax/ParallaxSection';
-import { useParallax } from '@/hooks/useParallax';
 
 export const ContactSection = () => {
-    const { scrollY } = useParallax();
 
     return (
         <section className="relative bg-transparent text-white py-32 px-4 overflow-hidden" id="contact">
