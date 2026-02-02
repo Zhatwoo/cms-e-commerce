@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
+import { useScrollGate } from './ScrollGate';
 
 const STAGGER_MS = 100;
 const IN_OFFSET_Y = 48;
@@ -98,9 +99,11 @@ function useScrollProgress() {
 
 export function CommercePlatform() {
   const { sectionRef, progressIn, progressOut } = useScrollProgress();
+  const { progress: gateProgress } = useScrollGate();
 
   const dissolveOut = 1 - progressOut;
-  const opacity = progressIn * dissolveOut;
+  // When gate progress is 0 we're at top of gate — show CommercePlatform; otherwise use scroll-based opacity
+  const opacity = gateProgress <= 0.05 ? 1 : progressIn * dissolveOut;
 
   const moveInOut = (delay: number, options?: { fromLeft?: boolean; fromRight?: boolean }) => {
     const fromLeft = options?.fromLeft ?? false;

@@ -2,9 +2,9 @@
   "[project]/src/app/landing/components/Globe3D.tsx [app-client] (ecmascript, next/dynamic entry)": {
     "id": "[project]/src/app/landing/components/Globe3D.tsx [app-client] (ecmascript, next/dynamic entry)",
     "files": [
-      "static/chunks/node_modules_b5e46747._.js",
+      "static/chunks/node_modules_cae593d8._.js",
       "static/chunks/src_app_landing_components_Globe3D_tsx_20b0165f._.js",
-      "static/chunks/src_app_landing_components_Globe3D_tsx_07c94c54._.js"
+      "static/chunks/src_app_landing_components_Globe3D_tsx_9fc06178._.js"
     ]
   }
 }

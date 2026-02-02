@@ -1,17 +1,280 @@
-[00:00:00.941] Server  WARN    ⚠ Duplicate page detected. src/app/api/auth/[...nextauth]/route.js and src/app/api/auth/[...nextauth]/route.ts resolve to /api/auth/[...nextauth]
-[00:00:00.941] Server  WARN    ⚠ Duplicate page detected. src/app/api/auth/[...nextauth]/route.js and src/app/api/auth/[...nextauth]/route.ts resolve to /api/auth/[...nextauth]
-[00:00:00.941] Server  LOG     ✓ Ready in 708ms
-[00:00:01.014] Browser ERROR   {"kind":"error","name":"ClientFetchError","type":"AuthError"}
-[00:00:01.014] Browser ERROR   uncaughtError: ChunkLoadError: Failed to load chunk /_next/static/chunks/src_app_landing_components_Globe3D_tsx_20b0165f._.js from module [project]/src/app/landing/components/Globe3D.tsx [app-client] (ecmascript, next/dynamic entry, async loader)
-[00:00:01.014] Browser ERROR   {"kind":"error","name":"ClientFetchError","type":"AuthError"}
-[00:00:03.600] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:03.678] Server  ERROR   (node:41859) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+[00:00:01.420] Server  WARN    ⚠ Duplicate page detected. src/app/api/auth/[...nextauth]/route.js and src/app/api/auth/[...nextauth]/route.ts resolve to /api/auth/[...nextauth]
+[00:00:01.420] Server  WARN    ⚠ Duplicate page detected. src/app/api/auth/[...nextauth]/route.js and src/app/api/auth/[...nextauth]/route.ts resolve to /api/auth/[...nextauth]
+[00:00:01.420] Server  LOG     ✓ Ready in 1099ms
+[00:00:04.434] Server  LOG     ○ Compiling /landing ...
+[00:00:06.805] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:06.806] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+      <LoadingBoundary name="landing/" loading={null}>
+        <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+          <RedirectBoundary>
+            <RedirectErrorBoundary router={{...}}>
+              <InnerLayoutRouter url="/landing" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
+                <SegmentViewNode type="page" pagePath="landing/pa...">
+                  <SegmentTrieNode>
+                  <LandingPage>
+                    <LandingScrollRoot headerSlot={<LandingHeader>}>
+                      <div className="min-h-scre..." ref={{current:null}}>
+                        <div>
+                        <Hero>
+                        <div className="relative z...">
+                          <ScrollGate>
+                            <div ref={{current:null}} className="relative w...">
+                              <div
+                                className="sticky w-full overflow-hidden rounded-t-3xl bg-[#092727]"
+                                style={{
++                                 top: 0
+-                                 top: "0px"
++                                 height: 1200
+-                                 height: "700px"
++                                 minHeight: "100vh"
+-                                 min-height: "100vh"
+                                }}
+                              >
+                              ...
+                        <FrontLayerEntranceSpacer>
+                        <FrontLayerWrapper>
+                          <div
+                            className="fixed left-0 right-0 top-0 z-20 overflow-y-auto overflow-x-hidden rounded-t-3xl..."
+                            style={{
++                             height: 1200
+-                             height: "700px"
++                             transform: "translateY(1200px)"
+-                             transform: "translateY(700px)"
++                             willChange: "transform"
+-                             will-change: "transform"
+                            }}
+                          >
+                ...
+              ...
+
+[00:00:06.860] Server  ERROR   (node:28033) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
 (Use `node --trace-deprecation ...` to show where the warning was created)
-[00:00:03.700] Server  ERROR   Failed to proxy http://localhost:5000/api/auth/session AggregateError
-[00:00:03.708] Server  ERROR   AggregateError
-[00:00:03.759] Server  ERROR   Failed to proxy http://localhost:5000/api/auth/session AggregateError
-[00:00:03.765] Server  ERROR   AggregateError
-[00:00:03.908] Browser ERROR   {"kind":"error","name":"ClientFetchError","type":"AuthError"}
-[00:00:03.908] Browser ERROR   {"kind":"error","name":"ClientFetchError","type":"AuthError"}
-[00:00:06.702] Browser WARN    THREE.Color: Alpha component of rgba(120, 140, 255, 0.6) will be ignored.
-[00:00:06.702] Browser WARN    THREE.Color: Alpha component of rgba(120, 140, 255, 0.6) will be ignored.
+[00:00:06.991] Server  ERROR   Failed to proxy http://localhost:5000/api/auth/session AggregateError
+[00:00:06.994] Server  ERROR   AggregateError
+[00:00:07.181] Browser ERROR   {"kind":"error","name":"ClientFetchError","type":"AuthError"}
+[00:00:07.205] Server  ERROR   Failed to proxy http://localhost:5000/api/auth/session AggregateError
+[00:00:07.207] Server  ERROR   AggregateError
+[00:00:07.347] Browser ERROR   {"kind":"error","name":"ClientFetchError","type":"AuthError"}
+[00:00:12.451] Browser WARN    THREE.Color: Alpha component of rgba(120, 140, 255, 0.6) will be ignored.
+[00:00:13.457] Browser WARN    THREE.Color: Alpha component of rgba(120, 140, 255, 0.6) will be ignored.
+[00:09:43.488] Server  LOG     ✓ Compiled in 7.2s
+[00:09:43.551] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./src/app/landing/components/scrolling.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:09:50.246] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:09:50.419] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+      <LoadingBoundary name="landing/" loading={null}>
+        <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+          <RedirectBoundary>
+            <RedirectErrorBoundary router={{...}}>
+              <InnerLayoutRouter url="/landing" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
+                <SegmentViewNode type="page" pagePath="landing/pa...">
+                  <SegmentTrieNode>
+                  <LandingPage>
+                    <LandingScrollRoot headerSlot={<LandingHeader>}>
+                      <div className="min-h-scre..." ref={{current:null}}>
+                        <div>
+                        <Hero>
+                        <div className="relative z...">
+                          <ScrollGate>
+                            <div ref={{current:null}} className="relative w...">
+                              <div
+                                className="sticky w-full overflow-hidden rounded-t-3xl bg-[#092727]"
+                                style={{
++                                 top: 0
+-                                 top: "0px"
++                                 height: 1200
+-                                 height: "700px"
++                                 minHeight: "100vh"
+-                                 min-height: "100vh"
+                                }}
+                              >
+                              ...
+                        <FrontLayerEntranceSpacer>
+                        <FrontLayerWrapper>
+                          <div
+                            className="fixed left-0 right-0 top-0 z-20 overflow-y-auto overflow-x-hidden rounded-t-3xl..."
+                            style={{
++                             height: 1200
+-                             height: "700px"
++                             transform: "translateY(1200px)"
+-                             transform: "translateY(700px)"
++                             willChange: "transform"
+-                             will-change: "transform"
+                            }}
+                          >
+                ...
+              ...
+
+[00:09:50.785] Server  ERROR   Failed to proxy http://localhost:5000/api/auth/session AggregateError
+[00:09:50.794] Server  ERROR   AggregateError
+[00:09:50.936] Server  ERROR   Failed to proxy http://localhost:5000/api/auth/session AggregateError
+[00:09:51.066] Server  ERROR   AggregateError
+[00:09:51.067] Browser ERROR   {"kind":"error","name":"ClientFetchError","type":"AuthError"}
+[00:09:51.141] Browser ERROR   {"kind":"error","name":"ClientFetchError","type":"AuthError"}
+[00:09:54.707] Browser WARN    THREE.Color: Alpha component of rgba(120, 140, 255, 0.6) will be ignored.
+[00:09:55.759] Browser WARN    THREE.Color: Alpha component of rgba(120, 140, 255, 0.6) will be ignored.
+[00:10:23.915] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:10:23.990] Server  ERROR   Failed to proxy http://localhost:5000/api/auth/session AggregateError
+[00:10:23.992] Server  ERROR   AggregateError
+[00:10:24.100] Server  ERROR   Failed to proxy http://localhost:5000/api/auth/session AggregateError
+[00:10:24.102] Server  ERROR   AggregateError
+[00:10:24.132] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+      <LoadingBoundary name="landing/" loading={null}>
+        <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+          <RedirectBoundary>
+            <RedirectErrorBoundary router={{...}}>
+              <InnerLayoutRouter url="/landing" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
+                <SegmentViewNode type="page" pagePath="landing/pa...">
+                  <SegmentTrieNode>
+                  <LandingPage>
+                    <LandingScrollRoot headerSlot={<LandingHeader>}>
+                      <div className="min-h-scre..." ref={{current:null}}>
+                        <div>
+                        <Hero>
+                        <div className="relative z...">
+                          <ScrollGate>
+                            <div ref={{current:null}} className="relative w...">
+                              <div
+                                className="sticky w-full overflow-hidden rounded-t-3xl bg-[#092727]"
+                                style={{
++                                 top: 0
+-                                 top: "0px"
++                                 height: 1200
+-                                 height: "700px"
++                                 minHeight: "100vh"
+-                                 min-height: "100vh"
+                                }}
+                              >
+                              ...
+                        <FrontLayerEntranceSpacer>
+                        <FrontLayerWrapper>
+                          <div
+                            className="fixed left-0 right-0 top-0 z-20 overflow-y-auto overflow-x-hidden rounded-t-3xl..."
+                            style={{
++                             height: 1200
+-                             height: "700px"
++                             transform: "translateY(1200px)"
+-                             transform: "translateY(700px)"
++                             willChange: "transform"
+-                             will-change: "transform"
+                            }}
+                          >
+                ...
+              ...
+
+[00:10:24.132] Browser ERROR   {"kind":"error","name":"ClientFetchError","type":"AuthError"}
+[00:10:24.367] Browser ERROR   {"kind":"error","name":"ClientFetchError","type":"AuthError"}
+[00:10:26.276] Browser WARN    THREE.Color: Alpha component of rgba(120, 140, 255, 0.6) will be ignored.
+[00:10:27.082] Browser WARN    THREE.Color: Alpha component of rgba(120, 140, 255, 0.6) will be ignored.
+[00:13:50.132] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./src/app/landing/components/scrolling.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:13:51.956] Server  LOG     ✓ Compiled in 15ms
+[00:13:54.040] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:13:54.500] Server  ERROR   Failed to proxy http://localhost:5000/api/auth/session AggregateError
+[00:13:54.504] Server  ERROR   AggregateError
+[00:13:54.585] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+      <LoadingBoundary name="landing/" loading={null}>
+        <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+          <RedirectBoundary>
+            <RedirectErrorBoundary router={{...}}>
+              <InnerLayoutRouter url="/landing" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
+                <SegmentViewNode type="page" pagePath="landing/pa...">
+                  <SegmentTrieNode>
+                  <LandingPage>
+                    <LandingScrollRoot headerSlot={<LandingHeader>}>
+                      <div className="min-h-scre..." ref={{current:null}}>
+                        <div>
+                        <Hero>
+                        <div className="relative z...">
+                          <ScrollGate>
+                            <div ref={{current:null}} className="relative w...">
+                              <div
+                                className="sticky w-full overflow-hidden rounded-t-3xl bg-[#092727]"
+                                style={{
++                                 top: 0
+-                                 top: "0px"
++                                 height: 1200
+-                                 height: "700px"
++                                 minHeight: "100vh"
+-                                 min-height: "100vh"
+                                }}
+                              >
+                              ...
+                        <FrontLayerEntranceSpacer>
+                        <FrontLayerWrapper>
+                          <div
+                            className="fixed left-0 right-0 top-0 z-20 overflow-y-auto overflow-x-hidden rounded-t-3xl..."
+                            style={{
++                             height: "100vh"
+-                             height: "100vh"
++                             minHeight: "100dvh"
++                             transform: "translateY(1200px)"
+-                             transform: "translateY(700px)"
++                             willChange: "transform"
+-                             min-height: "100dvh"
+-                             will-change: "transform"
+                            }}
+                          >
+                ...
+              ...
+
+[00:13:54.637] Browser ERROR   {"kind":"error","name":"ClientFetchError","type":"AuthError"}
+[00:13:54.658] Server  ERROR   Failed to proxy http://localhost:5000/api/auth/session AggregateError
+[00:13:54.661] Server  ERROR   AggregateError
+[00:13:54.926] Browser ERROR   {"kind":"error","name":"ClientFetchError","type":"AuthError"}
+[00:13:58.734] Browser WARN    THREE.Color: Alpha component of rgba(120, 140, 255, 0.6) will be ignored.
+[00:13:58.734] Browser WARN    THREE.Color: Alpha component of rgba(120, 140, 255, 0.6) will be ignored.
+[00:17:14.864] Server  LOG     ✓ Compiled in 1993ms
+[00:17:17.082] Browser WARN    THREE.Color: Alpha component of rgba(120, 140, 255, 0.6) will be ignored.
+[00:18:35.425] Server  LOG     ✓ Compiled in 653ms
+[00:18:36.524] Browser WARN    THREE.Color: Alpha component of rgba(120, 140, 255, 0.6) will be ignored.

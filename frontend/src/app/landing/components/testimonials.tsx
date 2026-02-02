@@ -1,7 +1,6 @@
 'use client';
 
 import dynamic from 'next/dynamic';
-import { useScrollGate } from './ScrollGate';
 
 const Globe3D = dynamic(
   () => import('./Globe3D').then((m) => m.Globe3D),
@@ -9,15 +8,8 @@ const Globe3D = dynamic(
 );
 
 export function Testimonials() {
-  const { progress: stackProgressRaw, allowInnerScroll } = useScrollGate();
-  const stackProgress = allowInnerScroll ? stackProgressRaw : 0;
-  const stackStyle = {
-    transform: `translateY(${Math.max(40 - stackProgress * 40, 0)}px)`,
-    transition: 'transform 320ms cubic-bezier(.2,.9,.2,1)',
-  };
-
   return (
-    <section className="relative w-full overflow-hidden px-6 py-16 pb-48 md:px-10 md:py-24 md:pb-64" style={{ ...stackStyle, backgroundColor: '#020205' }}>
+    <section className="relative flex-shrink-0 w-full overflow-hidden bg-transparent px-6 pt-8 pb-8 md:px-10 md:pt-12 md:pb-12">
       {/* Gradient background with clip-path — raised 10% from previous */}
       <div
         className="absolute inset-0 z-0 w-full"
@@ -42,13 +34,13 @@ export function Testimonials() {
             </span>
           </h2>
 
-          {/* 3D Globe — square container so sphere renders correctly (lowered 15%) */}
+          {/* 3D Globe — square container so sphere renders correctly (raised 15%, 10% smaller, 10% left) */}
           <div
-            className="absolute left-[100%] top-24 z-10 -translate-x-1/2 -translate-y-[5%] md:top-32"
+            className="absolute left-[90%] top-24 z-10 -translate-x-1/2 -translate-y-[15%] md:top-32"
             aria-hidden
           >
             <div
-              className="relative aspect-square h-[64rem] w-[64rem] scale-[1.25] overflow-hidden rounded-full md:h-[80rem] md:w-[80rem]"
+              className="relative aspect-square h-[64rem] w-[64rem] scale-[1.125] overflow-hidden rounded-full md:h-[80rem] md:w-[80rem]"
               style={{ isolation: 'isolate' }}
             >
               <Globe3D className="absolute inset-0 size-full" />
@@ -65,8 +57,8 @@ export function Testimonials() {
 
         </div>
 
-        {/* Contact Us — in place of testimonial cards (moved down 20% again); mb for spacing before footer */}
-        <div className="relative z-20 mb-20 mt-20 max-w-4xl translate-x-[-15%] translate-y-[55%] md:mt-28 md:mb-28">
+        {/* Contact Us — in place of testimonial cards; minimal gap before footer */}
+        <div className="relative z-20 mb-6 mt-12 max-w-4xl translate-x-[-15%] translate-y-[12%] md:mt-16 md:mb-8">
           <div className="mx-auto max-w-2xl rounded-2xl border-2 border-white bg-black p-8 shadow-xl md:p-10">
             <h3 className="text-center text-2xl font-bold text-white md:text-3xl">
               Contact Us
