@@ -17,7 +17,7 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="w-full border-t border-white/10 bg-black px-6 py-12 md:px-10 md:py-16">
+    <footer className="m-0 flex min-h-0 flex-1 flex-col justify-end w-full border-t border-white/10 bg-transparent px-6 pt-12 pb-6 md:px-10 md:pt-16 md:pb-8">
       <div className="mx-auto max-w-6xl">
         {/* Main footer content */}
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4 lg:gap-12">
@@ -77,9 +77,9 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Copyright */}
-        <div className="mt-12 border-t border-white/10 pt-8 text-center">
-          <p className="text-xs text-white/50 md:text-sm">
+        {/* Copyright — minimal bottom spacing so no gap below */}
+        <div className="mt-12 border-t border-white/10 pt-8 pb-0 text-center">
+          <p className="mb-0 text-xs text-white/50 md:text-sm">
             © {year} Company Name. All rights reserved.
           </p>
         </div>

@@ -1,10 +1,17 @@
 'use client';
 
 import Link from 'next/link';
+import { useLandingScroll } from './scrolling';
 
 export function LandingHeader() {
+  const { isScrolled } = useLandingScroll();
+
   return (
-    <header className="fixed left-0 right-0 top-0 z-30 flex w-full items-center justify-between bg-transparent pl-[7.5rem] pr-[7.5rem] py-6 md:pl-[15rem] md:pr-[15rem] md:pb-32 md:pt-8">
+    <header
+      className={`absolute left-0 right-0 top-0 flex w-full items-center justify-between pl-[7.5rem] pr-[7.5rem] py-4 transition-[background-color,backdrop-filter] duration-300 ease-out md:pl-[15rem] md:pr-[15rem] md:py-5 ${
+        isScrolled ? 'bg-neutral-900/90 backdrop-blur-md' : 'bg-transparent'
+      }`}
+    >
       <Link
         href="/"
         className="text-2xl font-medium tracking-wide text-white md:text-3xl"
