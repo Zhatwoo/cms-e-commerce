@@ -16,8 +16,8 @@ export default function LandingPage() {
   return (
     <LandingScrollRoot headerSlot={<LandingHeader />}>
       <Hero />
-      {/* Back layer: gate scrolls CommercePlatform + MercatoTools then handoff */}
-      <div className="relative z-10 -mt-[40vh] bg-[#092727]">
+      {/* Back layer: gate scrolls CommercePlatform + MercatoTools then handoff; rounded top so edge is curved */}
+      <div className="relative z-10 -mt-[40vh] rounded-t-3xl bg-[#092727]">
         <ScrollGate>
           <CommercePlatform />
           <MercatoTools />

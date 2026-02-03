@@ -47,11 +47,11 @@ const LandingScrollContext = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5
 function useLandingScroll() {
     _s();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(1);
-    if ($[0] !== "4c3b067ddaf8cc9b863007005b7aa26eeb6e0e3a18ecbf867b144ac679829fa9") {
+    if ($[0] !== "dc4d058a3c94c2dfbc93601f13dbac96c60650be87a36e288b34bbd88b16a88d") {
         for(let $i = 0; $i < 1; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "4c3b067ddaf8cc9b863007005b7aa26eeb6e0e3a18ecbf867b144ac679829fa9";
+        $[0] = "dc4d058a3c94c2dfbc93601f13dbac96c60650be87a36e288b34bbd88b16a88d";
     }
     return (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useContext"])(LandingScrollContext);
 }
@@ -59,11 +59,11 @@ _s(useLandingScroll, "gDsCjeeItUuvgOWf1v4qoK9RF6k=");
 function useScrollGate() {
     _s1();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(4);
-    if ($[0] !== "4c3b067ddaf8cc9b863007005b7aa26eeb6e0e3a18ecbf867b144ac679829fa9") {
+    if ($[0] !== "dc4d058a3c94c2dfbc93601f13dbac96c60650be87a36e288b34bbd88b16a88d") {
         for(let $i = 0; $i < 4; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "4c3b067ddaf8cc9b863007005b7aa26eeb6e0e3a18ecbf867b144ac679829fa9";
+        $[0] = "dc4d058a3c94c2dfbc93601f13dbac96c60650be87a36e288b34bbd88b16a88d";
     }
     const { gateProgress, scrollContainerRef } = useLandingScroll();
     let t0;
@@ -89,11 +89,11 @@ _s1(useScrollGate, "v+gVqFXZrHau0mEFL1HyUMje9Ig=", false, function() {
 function ScrollGate(t0) {
     _s2();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(28);
-    if ($[0] !== "4c3b067ddaf8cc9b863007005b7aa26eeb6e0e3a18ecbf867b144ac679829fa9") {
+    if ($[0] !== "dc4d058a3c94c2dfbc93601f13dbac96c60650be87a36e288b34bbd88b16a88d") {
         for(let $i = 0; $i < 28; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "4c3b067ddaf8cc9b863007005b7aa26eeb6e0e3a18ecbf867b144ac679829fa9";
+        $[0] = "dc4d058a3c94c2dfbc93601f13dbac96c60650be87a36e288b34bbd88b16a88d";
     }
     const { children } = t0;
     const gateContainerRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
@@ -266,7 +266,7 @@ function ScrollGate(t0) {
     let t13;
     if ($[20] !== t12 || $[21] !== t9) {
         t13 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "sticky w-full overflow-hidden rounded-t-3xl bg-[#092727]",
+            className: "sticky w-full overflow-hidden rounded-t-3xl",
             style: t9,
             children: t12
         }, void 0, false, {
@@ -330,22 +330,22 @@ _c = ScrollGate;
 function useLandingScrollSetter() {
     _s3();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(1);
-    if ($[0] !== "4c3b067ddaf8cc9b863007005b7aa26eeb6e0e3a18ecbf867b144ac679829fa9") {
+    if ($[0] !== "dc4d058a3c94c2dfbc93601f13dbac96c60650be87a36e288b34bbd88b16a88d") {
         for(let $i = 0; $i < 1; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "4c3b067ddaf8cc9b863007005b7aa26eeb6e0e3a18ecbf867b144ac679829fa9";
+        $[0] = "dc4d058a3c94c2dfbc93601f13dbac96c60650be87a36e288b34bbd88b16a88d";
     }
     return (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useContext"])(LandingScrollSetterContext);
 }
 _s3(useLandingScrollSetter, "gDsCjeeItUuvgOWf1v4qoK9RF6k=");
 function FrontLayerEntranceSpacer() {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(2);
-    if ($[0] !== "4c3b067ddaf8cc9b863007005b7aa26eeb6e0e3a18ecbf867b144ac679829fa9") {
+    if ($[0] !== "dc4d058a3c94c2dfbc93601f13dbac96c60650be87a36e288b34bbd88b16a88d") {
         for(let $i = 0; $i < 2; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "4c3b067ddaf8cc9b863007005b7aa26eeb6e0e3a18ecbf867b144ac679829fa9";
+        $[0] = "dc4d058a3c94c2dfbc93601f13dbac96c60650be87a36e288b34bbd88b16a88d";
     }
     let t0;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
@@ -370,11 +370,11 @@ _c1 = FrontLayerEntranceSpacer;
 function FrontLayerWrapper(t0) {
     _s4();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(10);
-    if ($[0] !== "4c3b067ddaf8cc9b863007005b7aa26eeb6e0e3a18ecbf867b144ac679829fa9") {
+    if ($[0] !== "dc4d058a3c94c2dfbc93601f13dbac96c60650be87a36e288b34bbd88b16a88d") {
         for(let $i = 0; $i < 10; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "4c3b067ddaf8cc9b863007005b7aa26eeb6e0e3a18ecbf867b144ac679829fa9";
+        $[0] = "dc4d058a3c94c2dfbc93601f13dbac96c60650be87a36e288b34bbd88b16a88d";
     }
     const { children } = t0;
     const { frontLayerProgress } = useLandingScroll();
@@ -458,11 +458,11 @@ _c2 = FrontLayerWrapper;
 function LandingScrollRoot(t0) {
     _s5();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(19);
-    if ($[0] !== "4c3b067ddaf8cc9b863007005b7aa26eeb6e0e3a18ecbf867b144ac679829fa9") {
+    if ($[0] !== "dc4d058a3c94c2dfbc93601f13dbac96c60650be87a36e288b34bbd88b16a88d") {
         for(let $i = 0; $i < 19; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "4c3b067ddaf8cc9b863007005b7aa26eeb6e0e3a18ecbf867b144ac679829fa9";
+        $[0] = "dc4d058a3c94c2dfbc93601f13dbac96c60650be87a36e288b34bbd88b16a88d";
     }
     const { children, headerSlot } = t0;
     const [scrollY, setScrollY] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0);
@@ -654,11 +654,11 @@ const IN_OFFSET_X_RIGHT = 24;
 function useScrollProgress() {
     _s();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(6);
-    if ($[0] !== "85131d9ff3df3c19b177709104ceab3c48cbafd81800888e8bee7f7905320f22") {
+    if ($[0] !== "16069c2391fb46025a20775a012b1a8ad93cab06f636be56fbb5c6320ef92ea9") {
         for(let $i = 0; $i < 6; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "85131d9ff3df3c19b177709104ceab3c48cbafd81800888e8bee7f7905320f22";
+        $[0] = "16069c2391fb46025a20775a012b1a8ad93cab06f636be56fbb5c6320ef92ea9";
     }
     const sectionRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
     const [progressIn, setProgressIn] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0);
@@ -794,11 +794,11 @@ function _useScrollProgressUseEffectGetScrollParent(el) {
 function CommercePlatform() {
     _s1();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(51);
-    if ($[0] !== "85131d9ff3df3c19b177709104ceab3c48cbafd81800888e8bee7f7905320f22") {
+    if ($[0] !== "16069c2391fb46025a20775a012b1a8ad93cab06f636be56fbb5c6320ef92ea9") {
         for(let $i = 0; $i < 51; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "85131d9ff3df3c19b177709104ceab3c48cbafd81800888e8bee7f7905320f22";
+        $[0] = "16069c2391fb46025a20775a012b1a8ad93cab06f636be56fbb5c6320ef92ea9";
     }
     const { sectionRef, progressIn, progressOut } = useScrollProgress();
     const { progress: gateProgress } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$landing$2f$components$2f$scrolling$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useScrollGate"])();
@@ -834,7 +834,9 @@ function CommercePlatform() {
     if ($[5] !== moveInOut) {
         t1 = {
             ...moveInOut(0),
-            backgroundColor: "#0A2727"
+            backgroundColor: "#0A2727",
+            borderTopLeftRadius: "1.5rem",
+            borderTopRightRadius: "1.5rem"
         };
         $[5] = moveInOut;
         $[6] = t1;
@@ -848,7 +850,7 @@ function CommercePlatform() {
             children: "The commerce platform behind everything we build"
         }, void 0, false, {
             fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-            lineNumber: 208,
+            lineNumber: 210,
             columnNumber: 10
         }, this);
         $[7] = t2;
@@ -859,7 +861,7 @@ function CommercePlatform() {
     if ($[8] === Symbol.for("react.memo_cache_sentinel")) {
         t3 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
             fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-            lineNumber: 215,
+            lineNumber: 217,
             columnNumber: 10
         }, this);
         $[8] = t3;
@@ -880,20 +882,20 @@ function CommercePlatform() {
                         "A flexible, modern system for building powerful online stores.",
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                             fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                            lineNumber: 222,
+                            lineNumber: 224,
                             columnNumber: 263
                         }, this),
                         "Everything you need to create, manage, and grow your store."
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                    lineNumber: 222,
+                    lineNumber: 224,
                     columnNumber: 61
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-            lineNumber: 222,
+            lineNumber: 224,
             columnNumber: 10
         }, this);
         $[9] = t4;
@@ -903,12 +905,12 @@ function CommercePlatform() {
     let t5;
     if ($[10] !== t1) {
         t5 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "w-full rounded-t-3xl px-6 py-12 md:px-10 md:py-16",
+            className: "w-full overflow-hidden rounded-t-3xl px-6 py-12 md:px-10 md:py-16",
             style: t1,
             children: t4
         }, void 0, false, {
             fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-            lineNumber: 229,
+            lineNumber: 231,
             columnNumber: 10
         }, this);
         $[10] = t1;
@@ -935,27 +937,27 @@ function CommercePlatform() {
                     className: "h-2 w-2 rounded-full bg-neutral-400"
                 }, void 0, false, {
                     fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                    lineNumber: 247,
+                    lineNumber: 249,
                     columnNumber: 104
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                     className: "h-2 w-2 rounded-full bg-neutral-400"
                 }, void 0, false, {
                     fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                    lineNumber: 247,
+                    lineNumber: 249,
                     columnNumber: 160
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                     className: "h-2 w-2 rounded-full bg-neutral-400"
                 }, void 0, false, {
                     fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                    lineNumber: 247,
+                    lineNumber: 249,
                     columnNumber: 216
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-            lineNumber: 247,
+            lineNumber: 249,
             columnNumber: 10
         }, this);
         $[14] = t7;
@@ -969,7 +971,7 @@ function CommercePlatform() {
             children: "Generate stock photos with various genders for creative testing"
         }, void 0, false, {
             fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-            lineNumber: 254,
+            lineNumber: 256,
             columnNumber: 10
         }, this);
         $[15] = t8;
@@ -988,7 +990,7 @@ function CommercePlatform() {
             ].map(_CommercePlatformAnonymous)
         }, void 0, false, {
             fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-            lineNumber: 261,
+            lineNumber: 263,
             columnNumber: 10
         }, this);
         $[16] = t9;
@@ -1015,19 +1017,19 @@ function CommercePlatform() {
                             ].map(_CommercePlatformAnonymous2)
                         }, void 0, false, {
                             fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                            lineNumber: 268,
+                            lineNumber: 270,
                             columnNumber: 190
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                    lineNumber: 268,
+                    lineNumber: 270,
                     columnNumber: 136
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-            lineNumber: 268,
+            lineNumber: 270,
             columnNumber: 11
         }, this);
         $[17] = t10;
@@ -1041,7 +1043,7 @@ function CommercePlatform() {
             children: t10
         }, void 0, false, {
             fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-            lineNumber: 275,
+            lineNumber: 277,
             columnNumber: 11
         }, this);
         $[18] = t6;
@@ -1066,27 +1068,27 @@ function CommercePlatform() {
                     className: "h-2 w-2 rounded-full bg-neutral-400"
                 }, void 0, false, {
                     fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                    lineNumber: 291,
+                    lineNumber: 293,
                     columnNumber: 105
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                     className: "h-2 w-2 rounded-full bg-neutral-400"
                 }, void 0, false, {
                     fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                    lineNumber: 291,
+                    lineNumber: 293,
                     columnNumber: 161
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                     className: "h-2 w-2 rounded-full bg-neutral-400"
                 }, void 0, false, {
                     fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                    lineNumber: 291,
+                    lineNumber: 293,
                     columnNumber: 217
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-            lineNumber: 291,
+            lineNumber: 293,
             columnNumber: 11
         }, this);
         $[22] = t13;
@@ -1106,14 +1108,14 @@ function CommercePlatform() {
                     children: "design"
                 }, void 0, false, {
                     fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                    lineNumber: 300,
+                    lineNumber: 302,
                     columnNumber: 79
                 }, this),
                 " today?"
             ]
         }, void 0, true, {
             fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-            lineNumber: 300,
+            lineNumber: 302,
             columnNumber: 11
         }, this);
         t15 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1121,7 +1123,7 @@ function CommercePlatform() {
             children: "Design, generate, print, and work on anything."
         }, void 0, false, {
             fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-            lineNumber: 301,
+            lineNumber: 303,
             columnNumber: 11
         }, this);
         t16 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1130,7 +1132,7 @@ function CommercePlatform() {
             children: "Start designing"
         }, void 0, false, {
             fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-            lineNumber: 302,
+            lineNumber: 304,
             columnNumber: 11
         }, this);
         $[23] = t14;
@@ -1162,19 +1164,19 @@ function CommercePlatform() {
                             ].map(_CommercePlatformAnonymous3)
                         }, void 0, false, {
                             fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                            lineNumber: 313,
+                            lineNumber: 315,
                             columnNumber: 200
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                    lineNumber: 313,
+                    lineNumber: 315,
                     columnNumber: 139
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-            lineNumber: 313,
+            lineNumber: 315,
             columnNumber: 11
         }, this);
         $[26] = t17;
@@ -1188,7 +1190,7 @@ function CommercePlatform() {
             children: t17
         }, void 0, false, {
             fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-            lineNumber: 320,
+            lineNumber: 322,
             columnNumber: 11
         }, this);
         $[27] = t12;
@@ -1215,27 +1217,27 @@ function CommercePlatform() {
                     className: "h-2 w-2 rounded-full bg-neutral-400"
                 }, void 0, false, {
                     fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                    lineNumber: 338,
+                    lineNumber: 340,
                     columnNumber: 105
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                     className: "h-2 w-2 rounded-full bg-neutral-400"
                 }, void 0, false, {
                     fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                    lineNumber: 338,
+                    lineNumber: 340,
                     columnNumber: 161
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                     className: "h-2 w-2 rounded-full bg-neutral-400"
                 }, void 0, false, {
                     fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                    lineNumber: 338,
+                    lineNumber: 340,
                     columnNumber: 217
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-            lineNumber: 338,
+            lineNumber: 340,
             columnNumber: 11
         }, this);
         $[31] = t20;
@@ -1263,7 +1265,7 @@ function CommercePlatform() {
                             ].map(_CommercePlatformAnonymous4)
                         }, void 0, false, {
                             fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                            lineNumber: 345,
+                            lineNumber: 347,
                             columnNumber: 183
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1271,19 +1273,19 @@ function CommercePlatform() {
                             children: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
                         }, void 0, false, {
                             fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                            lineNumber: 345,
+                            lineNumber: 347,
                             columnNumber: 282
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                    lineNumber: 345,
+                    lineNumber: 347,
                     columnNumber: 137
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-            lineNumber: 345,
+            lineNumber: 347,
             columnNumber: 11
         }, this);
         $[32] = t21;
@@ -1297,7 +1299,7 @@ function CommercePlatform() {
             children: t21
         }, void 0, false, {
             fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-            lineNumber: 352,
+            lineNumber: 354,
             columnNumber: 11
         }, this);
         $[33] = t19;
@@ -1316,7 +1318,7 @@ function CommercePlatform() {
             ]
         }, void 0, true, {
             fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-            lineNumber: 360,
+            lineNumber: 362,
             columnNumber: 11
         }, this);
         $[35] = t11;
@@ -1342,7 +1344,7 @@ function CommercePlatform() {
             children: "Explore Web Templates"
         }, void 0, false, {
             fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-            lineNumber: 378,
+            lineNumber: 380,
             columnNumber: 11
         }, this);
         $[41] = t25;
@@ -1357,7 +1359,7 @@ function CommercePlatform() {
             children: t25
         }, void 0, false, {
             fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-            lineNumber: 385,
+            lineNumber: 387,
             columnNumber: 11
         }, this);
         $[42] = t24;
@@ -1375,7 +1377,7 @@ function CommercePlatform() {
             ]
         }, void 0, true, {
             fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-            lineNumber: 393,
+            lineNumber: 395,
             columnNumber: 11
         }, this);
         $[44] = t23;
@@ -1395,7 +1397,7 @@ function CommercePlatform() {
             ]
         }, void 0, true, {
             fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-            lineNumber: 402,
+            lineNumber: 404,
             columnNumber: 11
         }, this);
         $[47] = sectionRef;
@@ -1420,7 +1422,7 @@ function _CommercePlatformAnonymous4(i_1) {
         "aria-hidden": true
     }, i_1, false, {
         fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-        lineNumber: 413,
+        lineNumber: 415,
         columnNumber: 10
     }, this);
 }
@@ -1433,7 +1435,7 @@ function _CommercePlatformAnonymous3(label, i_0) {
         children: label
     }, label, false, {
         fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-        lineNumber: 416,
+        lineNumber: 418,
         columnNumber: 10
     }, this);
 }
@@ -1443,7 +1445,7 @@ function _CommercePlatformAnonymous2(i) {
         "aria-hidden": true
     }, i, false, {
         fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-        lineNumber: 421,
+        lineNumber: 423,
         columnNumber: 10
     }, this);
 }
@@ -1453,7 +1455,7 @@ function _CommercePlatformAnonymous(cat) {
         children: cat
     }, cat, false, {
         fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-        lineNumber: 424,
+        lineNumber: 426,
         columnNumber: 10
     }, this);
 }

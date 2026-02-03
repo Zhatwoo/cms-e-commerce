@@ -129,7 +129,7 @@ export function ScrollGate({ children }: { children: React.ReactNode }) {
   return (
     <div ref={gateContainerRef} className="relative w-full">
       <div
-        className="sticky w-full overflow-hidden rounded-t-3xl bg-[#092727]"
+        className="sticky w-full overflow-hidden rounded-t-3xl"
         style={{
           top: 0,
           height: viewportHeight,
