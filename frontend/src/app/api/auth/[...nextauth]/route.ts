@@ -1,7 +1,7 @@
 import NextAuth from "next-auth";
 import Credentials from "next-auth/providers/credentials";
 
-// NextAuth v5 (Auth.js) configuration
+// NextAuth v5 (Auth.js) configuration sfasfjjhh
 const { handlers, auth, signIn, signOut } = NextAuth({
     providers: [
         Credentials({
