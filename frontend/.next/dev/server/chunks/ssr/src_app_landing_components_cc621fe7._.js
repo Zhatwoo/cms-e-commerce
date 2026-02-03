@@ -115,7 +115,7 @@ function ScrollGate({ children }) {
         className: "relative w-full",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "sticky w-full overflow-hidden rounded-t-3xl bg-[#092727]",
+                className: "sticky w-full overflow-hidden rounded-t-3xl",
                 style: {
                     top: 0,
                     height: viewportHeight,
@@ -390,10 +390,12 @@ function CommercePlatform() {
         className: "w-full bg-transparent pb-16 pt-0 md:pb-24 md:pt-0",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "w-full rounded-t-3xl px-6 py-12 md:px-10 md:py-16",
+                className: "w-full overflow-hidden rounded-t-3xl px-6 py-12 md:px-10 md:py-16",
                 style: {
                     ...moveInOut(0),
-                    backgroundColor: '#0A2727'
+                    backgroundColor: '#0A2727',
+                    borderTopLeftRadius: '1.5rem',
+                    borderTopRightRadius: '1.5rem'
                 },
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "mx-auto max-w-3xl text-center",
@@ -403,7 +405,7 @@ function CommercePlatform() {
                             children: "The commerce platform behind everything we build"
                         }, void 0, false, {
                             fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                            lineNumber: 134,
+                            lineNumber: 139,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -412,26 +414,26 @@ function CommercePlatform() {
                                 "Build, customize, and scale e-commerce websites with total control.",
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                     fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                                    lineNumber: 139,
+                                    lineNumber: 144,
                                     columnNumber: 13
                                 }, this),
                                 "A flexible, modern system for building powerful online stores.",
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                     fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                                    lineNumber: 141,
+                                    lineNumber: 146,
                                     columnNumber: 13
                                 }, this),
                                 "Everything you need to create, manage, and grow your store."
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                            lineNumber: 137,
+                            lineNumber: 142,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                    lineNumber: 133,
+                    lineNumber: 138,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
@@ -459,27 +461,27 @@ function CommercePlatform() {
                                                     className: "h-2 w-2 rounded-full bg-neutral-400"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                                                    lineNumber: 154,
+                                                    lineNumber: 159,
                                                     columnNumber: 15
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                     className: "h-2 w-2 rounded-full bg-neutral-400"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                                                    lineNumber: 155,
+                                                    lineNumber: 160,
                                                     columnNumber: 15
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                     className: "h-2 w-2 rounded-full bg-neutral-400"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                                                    lineNumber: 156,
+                                                    lineNumber: 161,
                                                     columnNumber: 15
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                                            lineNumber: 153,
+                                            lineNumber: 158,
                                             columnNumber: 13
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -490,7 +492,7 @@ function CommercePlatform() {
                                                     children: "Generate stock photos with various genders for creative testing"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                                                    lineNumber: 159,
+                                                    lineNumber: 164,
                                                     columnNumber: 15
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -505,12 +507,12 @@ function CommercePlatform() {
                                                             children: cat
                                                         }, cat, false, {
                                                             fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                                                            lineNumber: 164,
+                                                            lineNumber: 169,
                                                             columnNumber: 19
                                                         }, this))
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                                                    lineNumber: 162,
+                                                    lineNumber: 167,
                                                     columnNumber: 15
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -524,29 +526,29 @@ function CommercePlatform() {
                                                             "aria-hidden": true
                                                         }, i, false, {
                                                             fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                                                            lineNumber: 174,
+                                                            lineNumber: 179,
                                                             columnNumber: 19
                                                         }, this))
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                                                    lineNumber: 172,
+                                                    lineNumber: 177,
                                                     columnNumber: 15
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                                            lineNumber: 158,
+                                            lineNumber: 163,
                                             columnNumber: 13
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                                    lineNumber: 152,
+                                    lineNumber: 157,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                                lineNumber: 151,
+                                lineNumber: 156,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -561,27 +563,27 @@ function CommercePlatform() {
                                                     className: "h-2 w-2 rounded-full bg-neutral-400"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                                                    lineNumber: 189,
+                                                    lineNumber: 194,
                                                     columnNumber: 15
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                     className: "h-2 w-2 rounded-full bg-neutral-400"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                                                    lineNumber: 190,
+                                                    lineNumber: 195,
                                                     columnNumber: 15
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                     className: "h-2 w-2 rounded-full bg-neutral-400"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                                                    lineNumber: 191,
+                                                    lineNumber: 196,
                                                     columnNumber: 15
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                                            lineNumber: 188,
+                                            lineNumber: 193,
                                             columnNumber: 13
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -596,14 +598,14 @@ function CommercePlatform() {
                                                             children: "design"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                                                            lineNumber: 195,
+                                                            lineNumber: 200,
                                                             columnNumber: 31
                                                         }, this),
                                                         " today?"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                                                    lineNumber: 194,
+                                                    lineNumber: 199,
                                                     columnNumber: 15
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -611,7 +613,7 @@ function CommercePlatform() {
                                                     children: "Design, generate, print, and work on anything."
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                                                    lineNumber: 197,
+                                                    lineNumber: 202,
                                                     columnNumber: 15
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -620,7 +622,7 @@ function CommercePlatform() {
                                                     children: "Start designing"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                                                    lineNumber: 200,
+                                                    lineNumber: 205,
                                                     columnNumber: 15
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -637,29 +639,29 @@ function CommercePlatform() {
                                                             children: label
                                                         }, label, false, {
                                                             fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                                                            lineNumber: 208,
+                                                            lineNumber: 213,
                                                             columnNumber: 19
                                                         }, this))
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                                                    lineNumber: 206,
+                                                    lineNumber: 211,
                                                     columnNumber: 15
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                                            lineNumber: 193,
+                                            lineNumber: 198,
                                             columnNumber: 13
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                                    lineNumber: 187,
+                                    lineNumber: 192,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                                lineNumber: 186,
+                                lineNumber: 191,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -676,27 +678,27 @@ function CommercePlatform() {
                                                     className: "h-2 w-2 rounded-full bg-neutral-400"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                                                    lineNumber: 228,
+                                                    lineNumber: 233,
                                                     columnNumber: 15
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                     className: "h-2 w-2 rounded-full bg-neutral-400"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                                                    lineNumber: 229,
+                                                    lineNumber: 234,
                                                     columnNumber: 15
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                     className: "h-2 w-2 rounded-full bg-neutral-400"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                                                    lineNumber: 230,
+                                                    lineNumber: 235,
                                                     columnNumber: 15
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                                            lineNumber: 227,
+                                            lineNumber: 232,
                                             columnNumber: 13
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -716,12 +718,12 @@ function CommercePlatform() {
                                                             "aria-hidden": true
                                                         }, i, false, {
                                                             fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                                                            lineNumber: 235,
+                                                            lineNumber: 240,
                                                             columnNumber: 19
                                                         }, this))
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                                                    lineNumber: 233,
+                                                    lineNumber: 238,
                                                     columnNumber: 15
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -729,30 +731,30 @@ function CommercePlatform() {
                                                     children: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                                                    lineNumber: 242,
+                                                    lineNumber: 247,
                                                     columnNumber: 15
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                                            lineNumber: 232,
+                                            lineNumber: 237,
                                             columnNumber: 13
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                                    lineNumber: 226,
+                                    lineNumber: 231,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                                lineNumber: 225,
+                                lineNumber: 230,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                        lineNumber: 149,
+                        lineNumber: 154,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -764,18 +766,18 @@ function CommercePlatform() {
                             children: "Explore Web Templates"
                         }, void 0, false, {
                             fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                            lineNumber: 252,
+                            lineNumber: 257,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                        lineNumber: 251,
+                        lineNumber: 256,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/landing/components/commercePlatform.tsx",
-                lineNumber: 147,
+                lineNumber: 152,
                 columnNumber: 7
             }, this)
         ]

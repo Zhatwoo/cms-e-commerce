@@ -125,10 +125,15 @@ export function CommercePlatform() {
       ref={sectionRef}
       className="w-full bg-transparent pb-16 pt-0 md:pb-24 md:pt-0"
     >
-      {/* Full-width teal block with rounded top so corners are visible */}
+      {/* Full-width teal block with rounded top edge (3xl) */}
       <div
-        className="w-full rounded-t-3xl px-6 py-12 md:px-10 md:py-16"
-        style={{ ...moveInOut(0), backgroundColor: '#0A2727' }}
+        className="w-full overflow-hidden rounded-t-3xl px-6 py-12 md:px-10 md:py-16"
+        style={{
+          ...moveInOut(0),
+          backgroundColor: '#0A2727',
+          borderTopLeftRadius: '1.5rem',
+          borderTopRightRadius: '1.5rem',
+        }}
       >
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl lg:text-5xl">
